@@ -1,0 +1,13 @@
+@import 'variables/colors';
+@import 'variables/fonts';
+@import 'normalize/normalize.scss';
+
+/** BODY **/
+body {
+    background-color: $dark_color;
+    color: $bright_color;
+}
+
+a {
+    color: $bright_color;
+}

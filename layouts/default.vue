@@ -1,17 +1,17 @@
 <template>
     <div>
-        <uinav/>
-        <nuxt />
+        <Header/>
+        <nuxt/>
     </div>
 </template>
 <script>
-import uinav from '~/components/uinav'
+import Header from '~/components/header'
 
 export default {
   components: {
-    uinav
+    Header
   }
 }
 </script>
-<style>
+<style lang="scss">
 </style>
