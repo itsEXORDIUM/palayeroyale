@@ -5,7 +5,7 @@
     </div>
 </template>
 <script>
-import Header from '~/components/header'
+import Header from '~/components/header/header'
 
 export default {
   components: {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Palaye Royale</h1>
+    <h2>Palaye Royale</h2>
   </div>
 </template>
 
