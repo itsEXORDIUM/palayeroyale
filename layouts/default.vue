@@ -2,14 +2,29 @@
     <div>
         <Header/>
         <nuxt/>
+        <Footer/>
     </div>
 </template>
 <script>
-import Header from '~/components/header/header'
+import Header from '~/components/header_footer/header'
+import Footer from '~/components/header_footer/footer'
+import axios from 'axios'
 
 export default {
   components: {
-    Header
+    Header, Footer
+  },
+  data() {
+    return {
+      siteData: []
+    }
+  },
+  mounted() {
+    // Get Site Data
+    axios.get('http://51.15.241.193/wp-json/')
+      .then(response => {
+          this.siteData = response.data;
+      })
   }
 }
 </script>

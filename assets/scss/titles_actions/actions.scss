@@ -1,1 +1,19 @@
-.action {display: inline-block;font-family: 'Roboto Mono', monospace;font-weight:bold;font-size:2em;line-height:100%;color:$dark_color;background-color:$bright_color;text-transform: uppercase;}
+.action {
+    display: inline-block;
+    font-family: 'firasans_bold', Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:2em;
+    line-height:100%;
+    background-color:$white;
+    text-transform: uppercase;
+    padding:0.2rem 2rem;
+    transform:skew(-10deg);
+    box-shadow:5px 5px 0 $red;
+    transition: all .3s ease-in-out;
+
+    span {
+        display: block;
+        color:$black;
+        transform:skew(10deg);
+    }
+}

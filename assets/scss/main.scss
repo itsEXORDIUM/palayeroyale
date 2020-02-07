@@ -1,15 +1,31 @@
 /*** VARIABLES ***/
 @import 'variables/colors';
+@import 'variables/fonts';
 
 /*** NORMALIZE ***/
 @import 'normalize/normalize.scss';
+@import 'accessibility/access.scss';
 
 /*** PARTS ***/
 @import 'header_footer/header.scss';
 @import 'header_footer/footer.scss';
+@import 'header_footer/uinav.scss';
 @import 'titles_actions/actions.scss';
 @import 'titles_actions/titles.scss';
 
 /** INIT **/
-body {font-size:62.5%;background-color: $dark_color; color: $bright_color;font-family:'Roboto Mono', monospace;}
-a, button {color: $bright_color;}
+body {
+    font-size:62.5%;
+    background-color: $black;
+    color: $white;
+    font-family: 'firasans_regular', Arial, Helvetica, sans-serif;
+}
+a, button {
+    color: $white;
+}
+
+/** WRAP **/
+.wrap {
+    max-width:95rem;
+    margin: 0 auto;
+}

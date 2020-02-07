@@ -1,0 +1,47 @@
+// NAV
+header {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+// MENU BUTTON
+#btn_menu {
+    span {
+        font-family: 'firasans_bold', Arial, Helvetica, sans-serif;
+        font-size: 2em;
+        color:$white;
+        text-transform: uppercase;
+        line-height: 1.25em;
+        padding-left:0.625rem;
+    }
+}
+
+// SECONDARY MENU
+#secondaryMenu {
+    li {
+        a, button {
+            font-family: 'firasans_bold', arial, Arial, Helvetica, sans-serif;
+            font-size:2em;
+            color:$white;
+            text-transform: uppercase;
+            padding-left:1.625em;
+            background-repeat:no-repeat;
+            background-position: left center;
+            background-size: auto 0.875rem;
+
+            span {
+                border-bottom:0.1rem solid $white;
+            }
+
+            &.merch {
+                background-image:url('../svgs/menu/BAG.svg');
+            }
+
+            &.newsletter {
+                background-image: url('../svgs/menu/NEWSLETTER.svg');
+            }
+        }
+    }
+}
