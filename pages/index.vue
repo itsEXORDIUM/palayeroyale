@@ -1,7 +1,10 @@
 <template>
   <div>
-    <div class="cover_img">
+    <div id="cover_img">
       <img :src="featuredImage" alt=""/>
+      <div class="bloc_titre_logo wrap">
+        <h1>Palaye Royale</h1>
+      </div>
     </div>
     <latestVideos/>
     <latestSong/>
@@ -37,7 +40,8 @@ export default {
       homeData: [],
       featuredId: '',
       featuredImage: '',
-      medias: []
+      medias: [],
+      itemTest: []
     }
   },
   mounted() {
@@ -55,7 +59,8 @@ export default {
           var position = 0;
           this.medias.forEach(function (item) {
               if (item.id === this.featuredId) {
-                  this.featuredImage = item.media_details.sizes.full.source_url;
+                this.itemTest = item;
+                this.featuredImage = item.source_url;
               }
               position++;
           }.bind(this));

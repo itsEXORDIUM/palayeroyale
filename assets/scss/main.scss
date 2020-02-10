@@ -6,12 +6,18 @@
 @import 'normalize/normalize.scss';
 @import 'accessibility/access.scss';
 
-/*** PARTS ***/
+/*** GENERAL ***/
+@import 'titles_actions/actions.scss';
+@import 'titles_actions/titles.scss';
+
+/*** HEADER ***/
 @import 'header_footer/header.scss';
 @import 'header_footer/footer.scss';
 @import 'header_footer/uinav.scss';
-@import 'titles_actions/actions.scss';
-@import 'titles_actions/titles.scss';
+@import 'header_footer/access_panel.scss';
+
+/*** BLOCS ***/
+@import 'blocs/cover_img.scss';
 
 /** INIT **/
 body {
