@@ -55,7 +55,7 @@ export default {
       .then(response => {
           this.homeData = response.data;
           this.featuredId = response.data.featured_media;
-          this.getImage();
+          this.getFeaturedImage();
 
           this.songTitle = response.data.acf.song_title;
           this.songCover = response.data.acf.song_cover;
@@ -69,7 +69,7 @@ export default {
       })
   },
   methods: {
-      getImage: function () {
+      getFeaturedImage: function () {
         // Get Featured Image
         axios.get('http://51.15.241.193/wp-json/wp/v2/media/')
           .then(response => {
