@@ -41,7 +41,12 @@ export default {
       featuredId: '',
       featuredImage: '',
       medias: [],
-      itemTest: []
+      songTitle: '',
+      songCover: '',
+      firstVideo: [],
+      secondVideo: [],
+      tourPoster: '',
+      newsletterImg: ''
     }
   },
   mounted() {
@@ -50,21 +55,32 @@ export default {
       .then(response => {
           this.homeData = response.data;
           this.featuredId = response.data.featured_media;
-      })
+          this.getImage();
 
-    // Get Featured Image
-    axios.get('http://51.15.241.193/wp-json/wp/v2/media/')
-      .then(response => {
-          this.medias = response.data;
-          var position = 0;
-          this.medias.forEach(function (item) {
-              if (item.id === this.featuredId) {
-                this.itemTest = item;
-                this.featuredImage = item.source_url;
-              }
-              position++;
-          }.bind(this));
+          this.songTitle = response.data.acf.song_title;
+          this.songCover = response.data.acf.song_cover;
+
+          this.firstVideo = response.data.acf.first_video;
+          this.secondVideo = response.data.acf.second_video;
+
+          this.tourPoster = response.data.acf.tour_poster;
+          this.newsletterImg = response.data.acf.newsletter_image;
+
       })
+  },
+  methods: {
+      getImage: function () {
+        // Get Featured Image
+        axios.get('http://51.15.241.193/wp-json/wp/v2/media/')
+          .then(response => {
+              this.medias = response.data;
+              for(var i = 0; i<this.medias.length; i++) {
+                  if (this.medias[i].id == this.featuredId) {
+                    this.featuredImage = this.medias[i].source_url;
+                  }
+              }
+          })
+      }
   }
 }
 </script>
