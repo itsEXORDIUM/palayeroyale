@@ -11,6 +11,10 @@ import axios from 'axios'
 
 export default {
   components: {
+  },
+  props: {
+    songTitle : String,
+    songCover : String
   }
 }
 </script>

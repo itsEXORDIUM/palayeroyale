@@ -6,11 +6,11 @@
         <h1>Palaye Royale</h1>
       </div>
     </div>
-    <latestVideos/>
-    <latestSong/>
-    <tourDates/>
+    <latestVideos :firstVideo="firstVideo" :secondVideo="secondVideo"/>
+    <latestSong :songTitle="songTitle" :songCover="songCover"/>
+    <tourDates :tourPoster="tourPoster"/>
     <news/>
-    <newsletter/>
+    <newsletter :newsletterImg="newsletterImg"/>
   </div>
 </template>
 

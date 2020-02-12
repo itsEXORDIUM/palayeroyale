@@ -1,5 +1,63 @@
 #access_panel {
     position:absolute;
-    top:100%;
+    top:calc(100% + 3.125rem);
     right:0;
+
+    #open_access {
+        width:3.125rem;
+        height:3.125rem;
+        background:$red url('../svgs/S3A.svg') no-repeat center center;
+        background-size:contain;
+    }
+
+    .contain_access {
+        display:none;
+        width:14.0625rem;
+        position:absolute;
+        top:0;
+        left:3.125rem;
+        background-color:$black;
+
+        .form_body {
+            padding:1.25rem 1.125rem;
+
+            .form_line {
+                padding-left:2.1875rem;
+                position:relative;
+
+                input {
+                    position:absolute;
+                    left:0;
+                    top:50%;
+                    transform:translateY(-50%);
+                }
+            }
+        }
+
+        legend {
+            display:block;
+            width:100%;
+            height:3.125rem;
+            line-height:3.125rem;
+            background-color:$red;
+            text-align:center;
+            text-transform:uppercase;
+            font-size:2em;
+            font-family:'firasans_bold', arial, helvetica, sans-serif;
+        }
+
+        label {
+            font-family:'firasans_bold', arial, helvetica, sans-serif;
+            font-size:1.8em;
+            line-height:1.2em;
+        }
+    }
+
+    &.open {
+        right:14.0625rem;
+
+        .contain_access {
+            display:block;
+        }
+    } 
 }

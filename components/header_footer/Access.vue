@@ -1,19 +1,29 @@
 <template>
-    <div id="access_panel">
-        <button><span class="show-for-sr">Open the Accessibility Panel</span></button>
-        <form>
-            <fieldset>
-                <legend>Accessibility</legend>
-                <label for="titleFont">Change Title Font</label>
-                <input type="checkbox" id="titleFont"/>
+    <div id="access_panel" class="open">
+        <button id="open_access"><span class="show-for-sr">Open the Accessibility Panel</span></button>
+        <div class="contain_access">
+            <form>
+                <fieldset>
+                    <legend>Accessibility</legend>
+                    <div class="form_body">
+                        <div class="form_line">
+                            <label for="titleFont">Change Title Font</label>
+                            <input type="checkbox" id="titleFont"/>
+                        </div>
 
-                <label for="dyslexia">Dyslexia</label>
-                <input type="checkbox" id="dyslexia"/>
+                        <div class="form_line">
+                            <label for="dyslexia">Dyslexia</label>
+                            <input type="checkbox" id="dyslexia"/>
+                        </div>
 
-                <label for="lineHeight">More line height</label>
-                <input type="checkbox" id="lineHeight"/>
-            </fieldset>
-        </form>
+                        <div class="form_line">
+                            <label for="lineHeight">More line height</label>
+                            <input type="checkbox" id="lineHeight"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </div>
 </template>
 
