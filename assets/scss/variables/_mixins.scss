@@ -1,0 +1,7 @@
+@mixin redbowshadow {
+    box-shadow: 5px 5px 0 $red;
+}
+
+@mixin whiteborder {
+    border:3px solid $white;
+}

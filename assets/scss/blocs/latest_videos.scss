@@ -1,0 +1,55 @@
+#latest_videos {
+    h2 {
+        text-shadow: 5px 5px 10px rgba($black, 0.5);
+        font-size:4.688rem;
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        width:46.875rem;
+
+        li:last-of-type {
+            margin-left:1.563rem;
+        }
+
+        a {
+            display:block;
+            @include whiteborder;
+            width:22.625rem;
+            height:9.563rem;
+            overflow:hidden;
+            position:relative;
+
+            &:after {
+                content:"";
+                display:block;
+                width:100%;
+                height:100%;
+                position:absolute;
+                top:0;
+                left:0;
+                background-color:rgba($red,0.5);
+                opacity:0;
+                transition:opacity .3s ease-in-out;
+            }
+
+            img {
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                transition:transform .3s ease-in-out;
+            }
+
+            &:hover {
+                &:after {
+                    opacity:1;
+                }
+
+                img {
+                    transform:scale(1.1);
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 /*** VARIABLES ***/
 @import 'variables/colors';
 @import 'variables/fonts';
+@import 'variables/mixins';
 
 /*** NORMALIZE ***/
 @import 'normalize/normalize.scss';
@@ -18,6 +19,11 @@
 
 /*** BLOCS ***/
 @import 'blocs/cover_img.scss';
+@import 'blocs/latest_videos.scss';
+@import 'blocs/latest_song.scss';
+
+/*** PAGES ***/
+@import 'pages/home.scss';
 
 /** INIT **/
 body {
@@ -44,4 +50,14 @@ fieldset {
 .wrap {
     max-width:95rem;
     margin: 0 auto;
+}
+
+/*** BLOCS HOME ***/
+.bloc_home h2 {
+    font-family:'unifrakturmaguntia', 'firasans_Bold', Arial, Helvetica, sans-serif;
+    font-size:8.125rem;
+    line-height:1.2em;
+    color:$white;
+    margin-top:0;
+    margin-bottom:2.500rem;
 }

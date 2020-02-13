@@ -6,8 +6,10 @@
         <h1>Palaye Royale</h1>
       </div>
     </div>
-    <latestVideos :firstVideo="firstVideo" :secondVideo="secondVideo"/>
-    <latestSong :songTitle="songTitle" :songCover="songCover"/>
+    <div class="mini_modules wrap">
+      <latestVideos :firstVideo="firstVideo" :secondVideo="secondVideo"/>
+      <latestSong :songTitle="songTitle" :songCover="songCover"/>
+    </div>
     <tourDates :tourPoster="tourPoster"/>
     <news/>
     <newsletter :newsletterImg="newsletterImg"/>
