@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <div id="cover_img">
       <img :src="featuredImage" alt=""/>
       <div class="bloc_titre_logo wrap">
@@ -8,10 +8,10 @@
     </div>
     <div class="mini_modules wrap">
       <latestVideos :firstVideo="firstVideo" :secondVideo="secondVideo"/>
-      <latestSong :songTitle="songTitle" :songCover="songCover"/>
+      <latestSong :songTitle="songTitle" :songCover="songCover" :deezer="deezer" :spotify="spotify" :youtube_music="youtube_music" :google_play="google_play" :amazon_music="amazon_music" :itunes="itunes"/>
     </div>
-    <tourDates :tourPoster="tourPoster"/>
-    <news/>
+    <tourDates :tourPoster="tourPoster" :tourDates="tourDates"/>
+    <news :news="news"/>
     <newsletter :newsletterImg="newsletterImg"/>
   </div>
 </template>
@@ -19,8 +19,8 @@
 <script>
 import latestVideos from '~/components/home_modules/latestVideos'
 import latestSong from '~/components/home_modules/latestSong'
-import tourDates from '~/components/post_types/tourDates'
-import news from '~/components/post_types/news'
+import tourDates from '~/components/home_modules/tourDates'
+import news from '~/components/home_modules/news'
 import newsletter from '~/components/popins/newsletter'
 import axios from 'axios'
 
@@ -40,27 +40,39 @@ export default {
   data() {
     return {
       homeData: [],
-      featuredId: '',
       featuredImage: '',
       medias: [],
       songTitle: '',
       songCover: '',
+      deezer: '',
+      youtube_music: '',
+      spotify: '',
+      google_play: '',
+      amazon_music: '',
+      itunes: '',
       firstVideo: [],
       secondVideo: [],
       tourPoster: '',
-      newsletterImg: ''
+      tourDates: [],
+      newsletterImg: '',
+      news: []
     }
   },
   mounted() {
     // Get Home Page Data
-    axios.get('http://51.15.241.193/wp-json/wp/v2/pages/10')
+    axios.get('http://51.15.241.193/wp-json/wp/v2/pages/10?_embed')
       .then(response => {
           this.homeData = response.data;
-          this.featuredId = response.data.featured_media;
-          this.getFeaturedImage();
+          this.featuredImage = response.data._embedded['wp:featuredmedia']['0'].source_url;
 
           this.songTitle = response.data.acf.song_title;
           this.songCover = response.data.acf.song_cover;
+          this.deezer = response.data.acf.deezer;
+          this.youtube_music = response.data.acf.youtube_music;
+          this.spotify = response.data.acf.spotify;
+          this.google_play = response.data.acf.google_play;
+          this.amazon_music = response.data.acf.amazon_music;
+          this.itunes = response.data.acf.itunes;
 
           this.firstVideo = response.data.acf.first_video;
           this.secondVideo = response.data.acf.second_video;
@@ -69,20 +81,18 @@ export default {
           this.newsletterImg = response.data.acf.newsletter_image;
 
       })
-  },
-  methods: {
-      getFeaturedImage: function () {
-        // Get Featured Image
-        axios.get('http://51.15.241.193/wp-json/wp/v2/media/')
-          .then(response => {
-              this.medias = response.data;
-              for(var i = 0; i<this.medias.length; i++) {
-                  if (this.medias[i].id == this.featuredId) {
-                    this.featuredImage = this.medias[i].source_url;
-                  }
-              }
-          })
-      }
+
+    // Get Tour Dates Posts
+    axios.get('http://51.15.241.193/wp-json/wp/v2/Tour_Dates')
+      .then(response => {
+        this.tourDates = response.data;
+      })
+
+    // Get News Posts
+    axios.get('http://51.15.241.193/wp-json/wp/v2/posts?_embed')
+      .then(response => {
+        this.news = response.data;
+      })
   }
 }
 </script>

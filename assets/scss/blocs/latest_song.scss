@@ -23,4 +23,46 @@
             @include whiteborder;
         }
     }
+
+    .links {
+        display: flex;
+        justify-content: flex-end;
+        margin-top:0.6875rem;
+
+        li {
+            &:not(:first-child) {
+                margin-left:0.625rem;
+            }
+
+            a {
+                display: block;
+                width:1.25rem;
+                height:1.25rem;
+            }
+        }
+
+        .deezer a {
+            background: url('../svgs/latestSong/DEEZER.svg') no-repeat center center;
+        }
+
+        .spotify a {
+            background: url('../svgs/socialMedias/SPOTIFY.svg') no-repeat center center;
+        }
+
+        .amazon_music a {
+            background: url('../svgs/latestSong/AMAZON_MUSIC.svg') no-repeat center center;
+        }
+
+        .google_play a {
+            background: url('../svgs/latestSong/GOOGLE_PLAY.svg') no-repeat center center;
+        }
+
+        .itunes a {
+            background: url('../svgs/latestSong/ITUNES.svg') no-repeat center center;
+        }
+
+        .youtube_music a {
+            background: url('../svgs/latestSong/YOUTUBE_MUSIC.svg') no-repeat center center;
+        }
+    }
 }

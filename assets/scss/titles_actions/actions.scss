@@ -8,12 +8,28 @@
     text-transform: uppercase;
     padding:0.2rem 2rem;
     transform:skew(-10deg);
-    box-shadow:5px 5px 0 $red;
+    @include redbowshadow;
     transition: all .3s ease-in-out;
 
     span {
         display: block;
         color:$black;
         transform:skew(10deg);
+    }
+
+    &.small_action {
+        padding:0.2rem 1rem;
+    }
+}
+
+.big_action {
+    .action {
+        font-size: 3em;
+        padding:0.5rem 3rem;
+        transform:skew(-20deg);
+
+        span {
+            transform:skew(20deg);
+        }
     }
 }

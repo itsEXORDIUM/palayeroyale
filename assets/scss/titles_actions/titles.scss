@@ -1,0 +1,28 @@
+/*** BLOCS HOME ***/
+.bloc_home .title_home {
+    font-family:'unifrakturmaguntia', 'firasans_Bold', Arial, Helvetica, sans-serif;
+    font-size:8.125rem;
+    line-height:1em;
+    color:$white;
+    margin:0;
+    font-weight: normal;
+}
+
+.bloc_home .subtitle {
+    font-family:'firasans_Bold', Arial, Helvetica, sans-serif;
+    color:$grey;
+    font-size: 2em;
+    line-height: 1.2em;
+}
+
+.bloc_home .bloc_title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bloc_home .title_home {
+    +.subtitle {
+        margin-left:4.6875rem;
+    }
+}

@@ -1,12 +1,14 @@
 <template>
-    <div id="news">
-        <h2>Latest News</h2>
-    </div>
+<div></div>
 </template>
 
 <script>
+
 export default {
   components: {
+  },
+  props: {
+    news: Array
   }
 }
 </script>
