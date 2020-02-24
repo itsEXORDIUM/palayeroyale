@@ -1,11 +1,11 @@
 <template>
-    <div id="news" class="bloc_home wrap">
-      <div class="bloc_title">
+    <div id="news" class="bloc_home">
+      <div class="bloc_title wrap">
         <h2 class="title_home">Latest News</h2>
         <p class="subtitle">See what the bastards are up to.</p>
       </div>
       <div class="container_news">
-        <div class="news_card" ref="card" v-for="(card, index) in news" :key="index" @mouseover="hoverNews(event)">
+        <div v-for="(card, index) in news" :key="index" :class="[{ hover_card : index === 1 }, 'news_card']" @mouseover="hoverNews($event)">
           <div class="content">
             <h3 class="title" v-html="card.title.rendered"></h3>
             <div class="subtitle" v-html="card.excerpt.rendered"></div>
@@ -24,13 +24,18 @@ export default {
   props: {
     news: Array
   },
-  created: function() {
-    // const vm = this;
-    // console.log(this.$refs.card[1]);
-  },
   methods: {
     hoverNews: function(event) {
-      // document.querySelector('.card_news.hover').classList.remove('hover');
+      // console.log(event);
+      // var cardHover = this.$el.querySelector('.hover_card');
+      // cardHover.classList.remove('hover_card');
+      // if(event.target.classList.contains('news_card')) {
+      //   event.target.classList.add('hover_card');
+      // } else if (event.target.parentElement.classList.contains('news_card')){
+      //   event.target.parentElement.classList.add('hover_card');
+      // } else if (event.target.parentElement.parentElement.classList.contains('news_card')) {
+      //   event.target.parentElement.parentElement.classList.add('hover_card');
+      // }
     }
   }
 }
