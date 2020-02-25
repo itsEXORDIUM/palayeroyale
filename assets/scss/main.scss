@@ -23,6 +23,7 @@
 @import 'blocs/latest_song.scss';
 @import 'blocs/tour_dates.scss';
 @import 'blocs/news.scss';
+@import 'blocs/newsletter.scss';
 
 /*** PAGES ***/
 @import 'pages/home.scss';
@@ -50,6 +51,10 @@ ul {
 fieldset {
     margin:0;
     padding:0;
+}
+
+input[type=submit] {
+    cursor: pointer;
 }
 
 /** WRAP **/

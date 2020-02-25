@@ -14,6 +14,9 @@
           <img :src="card._embedded['wp:featuredmedia']['0'].source_url" alt=""/>
         </div>
       </div>
+      <div class="big_action">
+        <nuxt-link to="/news" class="action"><span>More News</span></nuxt-link>
+      </div>
     </div>
 </template>
 
@@ -26,16 +29,10 @@ export default {
   },
   methods: {
     hoverNews: function(event) {
-      // console.log(event);
-      // var cardHover = this.$el.querySelector('.hover_card');
-      // cardHover.classList.remove('hover_card');
-      // if(event.target.classList.contains('news_card')) {
-      //   event.target.classList.add('hover_card');
-      // } else if (event.target.parentElement.classList.contains('news_card')){
-      //   event.target.parentElement.classList.add('hover_card');
-      // } else if (event.target.parentElement.parentElement.classList.contains('news_card')) {
-      //   event.target.parentElement.parentElement.classList.add('hover_card');
-      // }
+      console.log(event);
+      var cardHover = this.$el.querySelector('.hover_card');
+      cardHover.classList.remove('hover_card');
+      event.target.closest('.news_card').classList.add('hover_card');
     }
   }
 }

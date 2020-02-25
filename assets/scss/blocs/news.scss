@@ -1,15 +1,23 @@
 .home {
     #news {
+        overflow:hidden;
+        padding-bottom:1rem;
+
         .container_news {
             display: flex;
+            overflow: hidden;
+            justify-content: center;
+            margin-left:-3rem;
+            margin-right:-3rem;
 
             .news_card {
-                width:25%;
+                width:30%;
                 height:28.75rem;
                 transition: width .3s ease-in-out;
     
                 .content {
-                    display:none;
+                    opacity:0;
+                    transition: opacity .3s ease-in-out .3s;
                 }
 
                 img {
@@ -20,7 +28,8 @@
                     width:50%;
     
                     .content {
-                        display:block;
+                        opacity:1;
+                        transition: opacity .3s ease-in-out 0;
                     }
 
                     img {
@@ -28,6 +37,11 @@
                     }
                 }
             }
+        }
+
+        .big_action {
+            margin-top:2.5rem;
+            text-align: center;
         }
     }
 }
@@ -86,8 +100,8 @@
         transform:skew(10deg);
         position:absolute;
         top:0;
-        left:-5%;
-        width:110%;
+        left:-10%;
+        width:120%;
         height:100%;
         object-fit: cover;
         z-index:-1;

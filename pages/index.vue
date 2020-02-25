@@ -21,7 +21,7 @@ import latestVideos from '~/components/home_modules/latestVideos'
 import latestSong from '~/components/home_modules/latestSong'
 import tourDates from '~/components/home_modules/tourDates'
 import news from '~/components/home_modules/news'
-import newsletter from '~/components/popins/newsletter'
+import newsletter from '~/components/home_modules/newsletter'
 import axios from 'axios'
 
 export default {
