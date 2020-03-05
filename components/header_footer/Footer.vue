@@ -6,6 +6,7 @@
             <li><a href="http://www.facebook.com/PalayeRoyale" title="Follow the band on Facebook (New Window)">Facebook</a></li>
             <li><a href="https://www.bandsintown.com/a/2390644-palaye-royale" title="Follow the band on bandsintown (New Window)">bandsintown</a></li>
             <li><a href="https://open.spotify.com/artist/0hAd6zwEgt9ILuMDY1prcI" title="Follow the band on Spotify (New Window)">Spotify</a></li>
+            <li><a href="https://www.bandsintown.com/a/2390644-palaye-royale" title="Follow the band on bandsintown (New Window)">bandsintown</a></li>
         </ul>
         
         <ul class="legals">

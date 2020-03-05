@@ -1,1 +1,29 @@
-// SOCIAL MEDIAS
+footer {
+    display:flex;
+    justify-content:center;
+    align-items:middle;
+    background-color:$light_grey;
+    padding:1.875rem 0;
+
+    .socials {
+        display:flex;
+        align-items: middle;
+    }
+
+    .legals {
+        margin-left:15.625rem;
+        display:flex;
+        align-items: middle;
+        font-family: 'firasans', arial, helvetica, sans-serif;
+        text-transform: uppercase;
+
+        li {
+            font-size:2rem;
+            line-height:1.2em;
+
+            a {
+                font-size:1rem;
+            }
+        }
+    }
+}
