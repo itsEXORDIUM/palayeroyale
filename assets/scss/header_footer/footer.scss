@@ -1,29 +1,49 @@
 footer {
     display:flex;
     justify-content:center;
-    align-items:middle;
+    align-items:center;
     background-color:$light_grey;
     padding:1.875rem 0;
 
     .socials {
-        display:flex;
-        align-items: middle;
+        li {
+            &:not(:first-of-type) {
+                margin-left:1.25rem;
+            }
+        }
     }
 
     .legals {
         margin-left:15.625rem;
         display:flex;
-        align-items: middle;
+        align-items: center;
         font-family: 'firasans', arial, helvetica, sans-serif;
         text-transform: uppercase;
 
         li {
-            font-size:2rem;
+            font-size:1rem;
             line-height:1.2em;
 
             a {
-                font-size:1rem;
+                font-size:1em;
             }
+
+            &:not(:first-of-type) {
+                margin-left:0.625rem;
+
+                &::before {
+                    content: "|";
+                    padding-right:0.625rem;
+                }
+            }
+        }
+    }
+
+    a {
+        transition: opacity .3s ease-in-out;
+
+        &:hover {
+            opacity:0.8;
         }
     }
 }

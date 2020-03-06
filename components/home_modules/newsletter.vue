@@ -1,5 +1,5 @@
 <template>
-    <div id="newsletter" class="bloc_home wrap">
+    <div class="newsletter bloc_home wrap">
       <div class="container_newsletter">
         <div class="bloc_title">
           <h2 class="title_home">Newsletter</h2>
@@ -21,7 +21,7 @@
           </fieldset>
         </form>
       </div>
-      <img :src="newsletterImg" alt=""/>
+      <img v-if="!popin" :src="newsletterImg" alt=""/>
     </div>
 </template>
 
@@ -30,7 +30,8 @@ export default {
   components: {
   },
   props: {
-    newsletterImg: String
+    newsletterImg: String,
+    popin: Boolean
   }
 }
 </script>

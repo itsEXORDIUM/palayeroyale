@@ -13,6 +13,8 @@
 
 /*** HEADER ***/
 @import 'header_footer/header.scss';
+@import 'header_footer/socials.scss';
+@import 'header_footer/mainMenu.scss';
 @import 'header_footer/footer.scss';
 @import 'header_footer/uinav.scss';
 @import 'header_footer/access_panel.scss';
@@ -37,6 +39,23 @@ body {
     background-color: $black;
     color: $white;
     font-family: 'firasans_regular', Arial, Helvetica, sans-serif;
+
+    &.popin_open {
+        overflow:hidden;
+
+        &::before {
+            content:"";
+            position:fixed;
+            display:block;
+            top:0;
+            left:0;
+            width:100%;
+            height:100vh;
+            background-color:$black;
+            opacity:0.75;
+            z-index:5;
+        }
+    }
 }
 a, button {
     color: $white;
@@ -56,8 +75,17 @@ input[type=submit] {
     cursor: pointer;
 }
 
+input[type=text]:focus {
+    outline-color: $red;
+}
+
 /** WRAP **/
 .wrap {
     max-width:95rem;
     margin: 0 auto;
+}
+
+/** OPENED / CLOSED ***/
+.opened {
+    display: block !important;
 }

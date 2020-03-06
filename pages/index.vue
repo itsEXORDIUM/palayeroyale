@@ -12,7 +12,7 @@
     </div>
     <tourDates :tourPoster="tourPoster" :tourDates="tourDates"/>
     <news :news="news"/>
-    <newsletter :newsletterImg="newsletterImg"/>
+    <newsletter :newsletterImg="newsletterImg" :popin="popin"/>
   </div>
 </template>
 
@@ -55,6 +55,7 @@ export default {
       tourPoster: '',
       tourDates: [],
       newsletterImg: '',
+      popin: false,
       news: []
     }
   },

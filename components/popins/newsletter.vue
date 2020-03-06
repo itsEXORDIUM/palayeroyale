@@ -1,16 +1,27 @@
 <template>
-    <div id="newsletter">
-        <h2>Newsletter</h2>
-        {{newsletterImg}}
+    <div id="popin_newsletter">
+        <button v-if="popin" id="close_popin" @click="closePopin()"><span class="show-for-sr">Close the popin</span></button>
+        <newsletter :popin="popin"/>
     </div>
 </template>
 
 <script>
+import newsletter from '~/components/home_modules/newsletter'
+
 export default {
   components: {
+    newsletter
   },
-  props: {
-    newsletterImg: String
+  data() {
+    return {
+      popin: true
+    }
+  },
+  methods: {
+      closePopin: function () {
+          document.getElementById('popin_newsletter').classList.remove('opened');
+          document.body.classList.remove('popin_open');
+      }
   }
 }
 </script>

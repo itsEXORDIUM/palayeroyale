@@ -9,9 +9,9 @@
         <mainMenu/>
 
         <ul id="secondaryMenu">
-            <li><a href="#" class="action" title="Get tickets (New Window)"><span>Tickets</span></a></li>
-            <li><a href="#" target="_blank" title="Get merch (New Window)" class="merch"><span>Get Merch</span></a></li>
-            <li><button class="newsletter"><span>Subscribe</span> <span class="show-for-sr">to the newsletter</span></button></li>
+            <li><a href="https://www.bandsintown.com/a/2390644-palaye-royale" class="action" title="Get tickets (New Window)" target="_blank"><span>Tickets</span></a></li>
+            <li><a href="https://www.palayeroyale.store/" target="_blank" title="Get merch (New Window)" class="merch"><span>Get Merch</span></a></li>
+            <li><button class="newsletter" @click="openPopin()"><span>Subscribe</span> <span class="show-for-sr">to the newsletter</span></button></li>
         </ul>
     </nav>
 </template>
@@ -22,6 +22,12 @@ import mainMenu from '~/components/header_footer/mainMenu'
 export default {
   components: {
       mainMenu
+  },
+  methods: {
+      openPopin: function () {
+          document.getElementById('popin_newsletter').classList.add('opened');
+          document.body.classList.add('popin_open');
+      }
   }
 }
 </script>

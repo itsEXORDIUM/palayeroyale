@@ -19,7 +19,7 @@
         img {
             width:12.5rem;
             height:12.5rem;
-            @include redbowshadow;
+            @include redboxshadow;
             @include whiteborder;
         }
     }
