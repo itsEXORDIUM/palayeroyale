@@ -102,17 +102,19 @@
         top:2.5rem;
         right:3.125rem;
         transform:skew(10deg);
+        z-index:0;
 
         &:hover::after {
             content:'';
             display:block;
             width:3.125rem;
             height:3.125rem;
-            background: url('../svgs/CLOSE_BTN.svg') no-repeat center center;
+            background: url('../svgs/CLOSE_BTN_red.svg') no-repeat center center;
             background-size:cover;
             position:absolute;
-            top:0;
-            right:0;
+            top:1px;
+            right:2px;
+            z-index:-1;
         }
     }
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header/>
+        <Header :backgroundMenu="backgroundMenu"/>
         <nuxt/>
         <Footer/>
         <popinNewsletter/>
@@ -18,7 +18,8 @@ export default {
   },
   data() {
     return {
-      siteData: []
+      siteData: [],
+      backgroundMenu: ''
     }
   },
   mounted() {
@@ -26,9 +27,14 @@ export default {
     axios.get('http://51.15.241.193/wp-json/')
       .then(response => {
           this.siteData = response.data;
+          this.activePage();
       })
+  },
+  methods: {
+    activePage : function () {
+      var activePage = document.getElementById('page').className;
+      this.backgroundMenu = activePage;
+    }
   }
 }
 </script>
-<style lang="scss">
-</style>

@@ -6,4 +6,68 @@
     top:0;
     left:0;
     background-color:$black;
+    display:none;
+    align-items: flex-start;
+
+    &.menuActive {
+        display:flex;
+    }
+
+    .wrap {
+        width:95rem;
+        margin-top: 1.563rem;
+        height:85vh;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        position:relative;
+
+        #close_menu {
+            padding-left:2.188rem;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-family:'firasans_bold', arial, helvetica, sans-serif;
+            background:url('../svgs/CLOSE_BTN.svg') no-repeat left center;
+            background-size:1rem;
+            position:absolute;
+            top: 0;
+            left:0;
+        }
+
+        .pages {
+            li {
+                a {
+                    font-family:'firasans_bold', Arial, Helvetica, sans-serif;
+                    color:transparent;
+                    text-transform: uppercase;
+                    font-size:10em;
+                    line-height:1.2em;
+                    -webkit-text-stroke: 3px $white;
+                    position:relative;
+
+                    &.nuxt-link-exact-active {
+                        color:$white;
+                        -webkit-text-stroke: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        position:absolute;
+        top:0;
+        left:0;
+        width:110%;
+        height:110%;
+        object-fit:cover;
+        z-index:-1;
+        opacity:0.25;
+    }
+
+    &.menuActive {
+        img {
+            animation: floatingImg 10s linear infinite alternate;
+        }
+    }
 }

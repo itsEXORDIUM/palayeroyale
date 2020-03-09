@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <div id="page" class="home">
     <div id="cover_img">
       <img :src="featuredImage" alt=""/>
-      <div class="bloc_titre_logo wrap">
+      <div class="bloc_titre_logo">
         <h1>Palaye Royale</h1>
       </div>
     </div>

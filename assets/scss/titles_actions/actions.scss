@@ -20,6 +20,10 @@
     &.small_action {
         padding:0.2rem 1rem;
     }
+
+    &:hover {
+        @include Hredboxshadow;
+    }
 }
 
 .big_action {
