@@ -1,11 +1,13 @@
 <template>
     <div id="tour_dates" class="bloc_home wrap">
       <div class="content">
-        <h2 class="title_home">Tour Dates</h2>
+        <h2 v-if="home" class="title_home">Tour Dates</h2>
+        <h1 class="title_home" v-else>Tour Dates</h1>
         <tourDatesPosts :tourDates="tourDates"/>
 
         <div class="big_action">
-          <nuxt-link to="/tourDates" class="action"><span>More Dates</span></nuxt-link>
+          <nuxt-link v-if="home" to="/tourDates" class="action"><span>More Dates</span></nuxt-link>
+          <button class="action" v-else><span>More Dates</span></button>
         </div>
         
       </div>
@@ -22,7 +24,8 @@ export default {
   },
   props: {
     tourPoster: String,
-    tourDates: Array
+    tourDates: Array,
+    home: Boolean
   }
 }
 </script>

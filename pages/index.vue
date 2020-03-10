@@ -10,8 +10,8 @@
       <latestVideos :firstVideo="firstVideo" :secondVideo="secondVideo"/>
       <latestSong :songTitle="songTitle" :songCover="songCover" :deezer="deezer" :spotify="spotify" :youtube_music="youtube_music" :google_play="google_play" :amazon_music="amazon_music" :itunes="itunes"/>
     </div>
-    <tourDates :tourPoster="tourPoster" :tourDates="tourDates"/>
-    <news :news="news"/>
+    <tourDates :tourPoster="tourPoster" :tourDates="tourDates" :home="home"/>
+    <news :news="news" :home="home"/>
     <newsletter :newsletterImg="newsletterImg" :popin="popin"/>
   </div>
 </template>
@@ -56,7 +56,8 @@ export default {
       tourDates: [],
       newsletterImg: '',
       popin: false,
-      news: []
+      news: [],
+      home: true
     }
   },
   mounted() {

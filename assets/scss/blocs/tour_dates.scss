@@ -1,111 +1,133 @@
 .home {
     #tour_dates {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-
         .content {
-            max-width:67%;
-            flex: 0 0 67%;
-            padding-left:5.3125rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-end;
-
             .title_home {
                 margin-bottom:-2.500rem;
-            }
-
-            .dates {
-                width:100%;
-
-                .tour_line {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    &:not(:first-child) {
-                        margin-top: 1.875rem;
-                    }
-
-                    .date {
-                        flex: 0 0 20%;
-                        max-width:20%;
-                        .weekday {
-                            font-family:'firasans_bold_italic', Arial, Helvetica, sans-serif;
-                            font-size: 2.4em;
-                            text-transform: uppercase;
-                            display: block;
-                            line-height: 1em;
-                        }
-
-                        .day {
-                            font-family:'firasans_bold', Arial, Helvetica, sans-serif;
-                            font-size: 2.4em;
-                            text-transform: uppercase;
-                            line-height: 1em;
-                        }
-                    }
-
-                    .place_city {
-                        flex: 0 0 30%;
-                        max-width:30%;
-                        position: relative;
-
-                        .place {
-                            font-family:'firasans_bold', Arial, Helvetica, sans-serif;
-                            text-transform: uppercase;
-                            color:$grey;
-                            font-size: 2em;
-                            line-height: 1em;
-                            display: block;
-                        }
-
-                        .city {
-                            font-family:'firasans_bold', Arial, Helvetica, sans-serif;
-                            font-size: 2.4em;
-                            line-height: 1em;
-                        }
-
-                        a::after {
-                            content:'';
-                            display: block;
-                            width:100%;
-                            height:100%;
-                            position: absolute;
-                            top:0;
-                            left:0;
-                        }
-                    }
-
-                    .guests {
-                        flex: 0 0 20%;
-                        max-width:20%;
-                        padding:0 1rem;
-                        span {
-                            font-family:'firasans_bold', Arial, Helvetica, sans-serif;
-                            font-size: 1.8em;
-                            line-height: 1.2em;
-                            color:$grey;
-                            text-transform: uppercase;
-                            
-                        }
-                    }
-
-                    .tickets {
-                        flex: 0 0 30%;
-                        max-width:30%;
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                }
             }
         }
 
         img {
             max-width:33%;
             flex: 0 0 33%;
+        }
+    }
+}
+
+.tourdates {
+    min-height:calc(100vh - 5rem);
+
+    #tour_dates {
+        .title_home {
+            margin-bottom:2.5rem;
+        }
+
+        .dates {
+            margin-bottom:6.25rem;
+        }
+
+        padding-top:11.25rem;
+        padding-bottom:6.25rem;
+        margin-top:0;
+    }
+}
+
+#tour_dates {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    .content {
+        max-width:67%;
+        flex: 0 0 67%;
+        padding-left:5.3125rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .dates {
+            width:100%;
+
+            .tour_line {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &:not(:first-child) {
+                    margin-top: 1.875rem;
+                }
+
+                .date {
+                    flex: 0 0 20%;
+                    max-width:20%;
+                    .weekday {
+                        font-family:'firasans_bold_italic', Arial, Helvetica, sans-serif;
+                        font-size: 2.4em;
+                        text-transform: uppercase;
+                        display: block;
+                        line-height: 1em;
+                    }
+
+                    .day {
+                        font-family:'firasans_bold', Arial, Helvetica, sans-serif;
+                        font-size: 2.4em;
+                        text-transform: uppercase;
+                        line-height: 1em;
+                    }
+                }
+
+                .place_city {
+                    flex: 0 0 30%;
+                    max-width:30%;
+                    position: relative;
+
+                    .place {
+                        font-family:'firasans_bold', Arial, Helvetica, sans-serif;
+                        text-transform: uppercase;
+                        color:$grey;
+                        font-size: 2em;
+                        line-height: 1em;
+                        display: block;
+                    }
+
+                    .city {
+                        font-family:'firasans_bold', Arial, Helvetica, sans-serif;
+                        font-size: 2.4em;
+                        line-height: 1em;
+                    }
+
+                    a::after {
+                        content:'';
+                        display: block;
+                        width:100%;
+                        height:100%;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                    }
+                }
+
+                .guests {
+                    flex: 0 0 20%;
+                    max-width:20%;
+                    padding:0 1rem;
+                    span {
+                        font-family:'firasans_bold', Arial, Helvetica, sans-serif;
+                        font-size: 1.8em;
+                        line-height: 1.2em;
+                        color:$grey;
+                        text-transform: uppercase;
+                        
+                    }
+                }
+
+                .tickets {
+                    flex: 0 0 30%;
+                    max-width:30%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
         }
     }
 }

@@ -12,6 +12,10 @@
     font-weight: normal;
 }
 
+#page:not(.home) .bloc_home .title_home {
+    font-size:6rem;
+}
+
 .bloc_home .subtitle {
     font-family:'firasans_Bold', Arial, Helvetica, sans-serif;
     color:$grey;
