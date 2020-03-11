@@ -44,7 +44,7 @@ header {
         transform:translateY(-50%);
         left:0;
         transform-origin:top left;
-        transition: all 0.2s ease-in-out;
+        transition: all .2s cubic-bezier(0.67, 0.01, 0.15, 0.98);
 
         &::before {
             content:'';
@@ -55,7 +55,7 @@ header {
             background-color:$white;
             top:-8px;
             left:0;
-            transition: all 0.2s ease-in-out;
+            transition: all .2s cubic-bezier(0.67, 0.01, 0.15, 0.98);
         }
 
         &::after {
@@ -68,18 +68,23 @@ header {
             top:8px;
             left:0;
             transform-origin:bottom left;
-            transition: all 0.2s ease-in-out;
+            transition: all .2s cubic-bezier(0.67, 0.01, 0.15, 0.98);
         }
 
         &.toCross {
-            animation: middleline .3s ease-in-out forwards;
+            width:0;
+            background-color:transparent;
 
             &::before {
-                animation: firstline .3s ease-in-out forwards;
+                transform:rotate(45deg);
+                top:0;
             }
             
             &::after {
-                animation: lastline .3s ease-in-out forwards;
+                transform:rotate(-45deg);
+                width:1.25rem;
+                left:4px;
+                top:7px;
             }
         }
     }

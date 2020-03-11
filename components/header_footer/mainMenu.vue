@@ -11,10 +11,10 @@
             <li class="spotify"><a href="https://open.spotify.com/artist/0hAd6zwEgt9ILuMDY1prcI" title="Follow the band on Spotify (New Window)" target="_blank"><span class="show-for-sr">Spotify</span></a></li>
           </ul>
         </ul>
-        <ul class="pages">
+        <ul class="pages" @click="closeMenu()">
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li><nuxt-link to="/tourDates">Tour Dates</nuxt-link></li>
-          <li><nuxt-link to="/royalTelevision">Royal Television</nuxt-link></li>
+          <li><nuxt-link to="/royalTelevision">Bastards Television</nuxt-link></li>
           <li><nuxt-link to="/news">News</nuxt-link></li>
           <li><a href="#">Music</a></li>
           <li><nuxt-link to="/about">About</nuxt-link></li>
@@ -30,6 +30,14 @@ export default {
   },
   props: {
     backgroundMenu: String
+  },
+  methods: {
+    closeMenu: function() {
+      document.querySelector('#mainMenu').classList.remove('menuActive');
+      document.body.classList.remove('popin_open');
+      document.querySelector('#btn_menu span:not(.btn)').innerHTML = "Menu";
+      document.querySelector('#btn_menu span.btn').classList.remove('toCross');
+    }
   }
 }
 </script>

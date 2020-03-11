@@ -90,31 +90,23 @@
     @include redboxshadow;
     @include whiteborder;
     padding:3.125rem 15rem;
-    z-index:6;
+    z-index:9999;
 
     #close_popin {
         display:block;
-        width:3.125rem;
-        height:3.125rem;
+        width:3.4rem;
+        height:3.4rem;
         background: url('../svgs/CLOSE_BTN.svg') no-repeat center center;
-        background-size:cover;
+        background-size:2.5rem;
         position:absolute;
         top:2.5rem;
         right:3.125rem;
         transform:skew(10deg);
         z-index:0;
+        transition:background-color .3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
 
-        &:hover::after {
-            content:'';
-            display:block;
-            width:3.125rem;
-            height:3.125rem;
-            background: url('../svgs/CLOSE_BTN_red.svg') no-repeat center center;
-            background-size:cover;
-            position:absolute;
-            top:1px;
-            right:2px;
-            z-index:-1;
+        &:hover {
+            background-color:$red;
         }
     }
 

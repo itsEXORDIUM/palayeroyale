@@ -40,6 +40,10 @@ export default {
             this.img_one = response.data.acf.picture_1;
             this.img_two = response.data.acf.picture_2;
         })
+
+        this.$el.querySelector('.imgs img:first-of-type').classList.add('fadefromleft');
+        this.$el.querySelector('.imgs img:nth-of-type(2)').classList.add('fadefromleft','delay');
+        this.$el.querySelector('.imgs img:last-of-type').classList.add('fadefromleft','delay_one');
     }
 }
 </script>

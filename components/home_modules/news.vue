@@ -40,6 +40,10 @@ export default {
     home: Boolean,
     pageTitle: String
   },
+  mounted() {
+    document.querySelector('.title_home').classList.add('fadein','delay');
+    document.querySelector('.container_news').classList.add('fadein','delay_two');
+  },
   methods: {
     hoverNews: function(event) {
       var cardHover = this.$el.querySelector('.hover_card');

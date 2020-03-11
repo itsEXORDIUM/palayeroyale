@@ -44,27 +44,36 @@ body {
     background-color: $black;
     color: $white;
     font-family: 'firasans_regular', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    width:100vw;
 
     &.popin_open {
         overflow:hidden;
 
-        &::before {
-            content:"";
-            position:fixed;
-            display:block;
-            top:0;
-            left:0;
-            width:100%;
-            height:100vh;
-            background-color:$black;
-            opacity:0.75;
-            z-index:5;
+        #access_panel {
+            right:0;
+        }
+
+        &_small {
+            &::before {
+                content:"";
+                position:fixed;
+                display:block;
+                top:0;
+                left:0;
+                width:100%;
+                height:100vh;
+                background-color:$black;
+                opacity:0.75;
+                z-index:110;
+            }
         }
     }
 }
 a, button {
     color: $white;
 }
+
 ul {
     margin: 0;
     padding: 0;

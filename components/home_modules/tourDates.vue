@@ -26,6 +26,10 @@ export default {
     tourPoster: String,
     tourDates: Array,
     home: Boolean
+  },
+  mounted() {
+    this.$el.querySelector('.title_home').classList.add('fadein','delay');
+    this.$el.querySelector('.big_action').classList.add('fadein','delay_two');
   }
 }
 </script>

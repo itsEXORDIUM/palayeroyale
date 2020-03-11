@@ -5,7 +5,7 @@
           <h1 class="title_home">{{pageTitle}}</h1>
         </div>
         <div class="bandmembers wrap">
-          <div class="remi" @mouseover="mbImg($event)">
+          <div class="bandmember remi" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
             <p class="name">{{mbone.name}}</p>
             <div class="line">
               <p class="nickname">{{mbone.nickname}}</p>
@@ -17,7 +17,7 @@
             </div>
             <p class="role">{{mbone.role}}</p>
           </div>
-          <div class="seb">
+          <div class="bandmember seb" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
             <p class="name">{{mbtwo.name}}</p>
             <div class="line">
               <p class="nickname">{{mbtwo.nickname}}</p>
@@ -29,7 +29,7 @@
             </div>
             <p class="role">{{mbtwo.role}}</p>
           </div>
-          <div class="em">
+          <div class="bandmember em" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
             <p class="name">{{mbthree.name}}</p>
             <div class="line">
               <p class="nickname">{{mbthree.nickname}}</p>
@@ -42,7 +42,7 @@
             <p class="role">{{mbthree.role}}</p>
           </div>
         </div>
-        <div class="img">
+        <div class="img bandMb">
           <img :src="featuredImage" alt=""/>
         </div>
       </div>
@@ -88,12 +88,29 @@ export default {
             this.mbthree = response.data.acf.band_member_3;
             this.mbthreeSocials = response.data.acf.band_member_3.socialmedias;
         })
+
+      document.querySelector('.title_home').classList.add('fadein','delay_one');
+      document.querySelector('.img').classList.add('opentobottom','delay');
+      document.querySelector('.bandmembers').classList.add('fadein','delay_two');
   },
   methods: {
-    // mbImg: function (event) {
-    //   var bandMb = this.$el.querySelector('div');
-    //   bandMb.
-    // }
+      mbImg: function (event) {
+        document.querySelector('.img').classList.remove('opentobottom','delay');
+
+        var bandMb = event.target.closest('.bandmember');
+        if (bandMb.classList.contains('remi')) {
+          this.$el.querySelector('.bandMb img').src = this.mbone.picture;
+        } else if (bandMb.classList.contains('seb')) {
+          this.$el.querySelector('.bandMb img').src = this.mbtwo.picture;
+        } else if (bandMb.classList.contains('em')) {
+          this.$el.querySelector('.bandMb img').src = this.mbthree.picture;
+        }
+
+        document.querySelector('.img').classList.add('opentobottom');
+      },
+      mbImgBack: function () {
+        this.$el.querySelector('.bandMb img').src = this.featuredImage;
+      }
   }
 }
 </script>

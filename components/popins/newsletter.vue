@@ -19,8 +19,9 @@ export default {
   },
   methods: {
       closePopin: function () {
-          document.getElementById('popin_newsletter').classList.remove('opened');
-          document.body.classList.remove('popin_open');
+          document.getElementById('popin_newsletter').classList.add('fadeout');
+          document.getElementById('popin_newsletter').classList.remove('opened','fadein');
+          document.body.classList.remove('popin_open_small');
       }
   }
 }

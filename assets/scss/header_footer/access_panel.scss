@@ -1,8 +1,8 @@
 #access_panel {
     position:absolute;
     top:calc(100% + 3.125rem);
-    right:0;
-    transition:right .3s ease-in-out;
+    right:1rem;
+    transition: right .3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
 
     #open_access {
         width:3.125rem;
@@ -12,7 +12,6 @@
     }
 
     .contain_access {
-        display:none;
         width:14.0625rem;
         position:absolute;
         top:0;
@@ -101,9 +100,5 @@
 
     &.open {
         right:14.0625rem;
-
-        .contain_access {
-            display:block;
-        }
     } 
 }

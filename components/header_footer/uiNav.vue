@@ -26,8 +26,9 @@ export default {
   },
   methods: {
       openPopin: function () {
-          document.getElementById('popin_newsletter').classList.add('opened');
-          document.body.classList.add('popin_open');
+          document.getElementById('popin_newsletter').classList.remove('fadeout');
+          document.getElementById('popin_newsletter').classList.add('opened','fadein');
+          document.body.classList.add('popin_open_small');
       },
       openMenu: function () {
           document.getElementById('mainMenu').classList.toggle('menuActive');

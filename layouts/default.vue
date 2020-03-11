@@ -29,6 +29,15 @@ export default {
           this.siteData = response.data;
           this.activePage();
       })
+
+    // Scroll event
+    window.onscroll = function() {
+        if(document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+          document.body.classList.add('backgroundHeader');
+        } else if (document.documentElement.scrollTop < 300 || document.body.scrollTop < 300) {
+          document.body.classList.remove('backgroundHeader');
+        }
+    }
   },
   methods: {
     activePage : function () {

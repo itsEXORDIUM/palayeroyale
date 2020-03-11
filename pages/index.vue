@@ -95,6 +95,10 @@ export default {
       .then(response => {
         this.news = response.data;
       })
+
+    document.getElementById('cover_img').classList.add('opentobottom','light_delay');
+    document.getElementById('latest_videos').classList.add('fadein','delay_one');
+    document.getElementById('latest_song').classList.add('fadein','delay_two');
   }
 }
 </script>
