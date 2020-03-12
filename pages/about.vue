@@ -46,6 +46,15 @@
           <img :src="featuredImage" alt=""/>
         </div>
       </div>
+      <div class="imgs">
+          <div class="img_container">
+            <img :src="pictureone" alt=""/>
+          </div>
+          <div class="img_container">
+            <img :src="picturetwo" alt=""/>
+          </div>
+      </div>
+      <div class="aboutText wrap" v-html="aboutText"></div>
     </div>
 </template>
 
@@ -71,7 +80,11 @@ export default {
           mbtwo: [],
           mbtwoSocials: [],
           mbthree: [],
-          mbthreeSocials: []
+          mbthreeSocials: [],
+          pictureone: '',
+          picturetwo: '',
+          picturethree: '',
+          aboutText: {}
         }
     },
   mounted() {
@@ -87,15 +100,20 @@ export default {
             this.mbtwoSocials = response.data.acf.band_member_2.socialmedias;
             this.mbthree = response.data.acf.band_member_3;
             this.mbthreeSocials = response.data.acf.band_member_3.socialmedias;
+            this.pictureone = response.data.acf.picture_one;
+            this.picturetwo = response.data.acf.picture_two;
+            this.picturethree = response.data.acf.picture_three;
+            this.aboutText = response.data.content.rendered;
         })
 
       document.querySelector('.title_home').classList.add('fadein','delay_one');
       document.querySelector('.img').classList.add('opentobottom','delay');
+      this.goodbyeAnim();
       document.querySelector('.bandmembers').classList.add('fadein','delay_two');
   },
   methods: {
       mbImg: function (event) {
-        document.querySelector('.img').classList.remove('opentobottom','delay');
+        document.querySelector('.img').style.height = 'auto';
 
         var bandMb = event.target.closest('.bandmember');
         if (bandMb.classList.contains('remi')) {
@@ -107,9 +125,21 @@ export default {
         }
 
         document.querySelector('.img').classList.add('opentobottom');
+        this.goodbyeAnim();
       },
       mbImgBack: function () {
+        document.querySelector('.img').style.height = 'auto';
+
         this.$el.querySelector('.bandMb img').src = this.featuredImage;
+
+        document.querySelector('.img').classList.add('opentobottom');
+        this.goodbyeAnim();
+      },
+      goodbyeAnim: function() {
+        setTimeout( function(){ 
+        document.querySelector('.img').classList.remove('opentobottom','delay'); 
+        document.querySelector('.img').style.height = '100vh';
+        }, 3000);
       }
   }
 }

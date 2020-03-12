@@ -5,6 +5,7 @@
     .bloc_home {
         margin-top:0;
         padding-top:8rem;
+        margin-bottom:6.25rem;
         height:100vh;
 
         .bloc_title {
@@ -34,7 +35,7 @@
                 }
 
                 &:not(:first-of-type) {
-                    margin-top:4.813rem;
+                    padding-top:4.813rem;
                 }
 
                 &.remi {
@@ -123,5 +124,37 @@
             height:100%;
             object-fit:cover;
         }
+    }
+
+    .imgs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom:6.25rem;
+
+        .img_container {
+            max-width:49%;
+            flex:0 0 49%;
+            transform:skew(-10deg);
+            height:45vh;
+            overflow:hidden;
+            @include redboxshadow;
+            border-style:inset;
+            @include whiteborder;
+
+            img {
+                width:110%;
+                height:100%;
+                margin-left:-5%;
+                object-fit: cover;
+                transform:skew(10deg);
+            }
+        }
+    }
+
+    .aboutText {
+        margin-bottom:6.25rem;
+        column-count: 3;
+        column-gap: 5.313rem;
+        height:100%;
     }
 }
