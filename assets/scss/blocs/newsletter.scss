@@ -58,6 +58,7 @@
                         color:$black;
                         text-transform: uppercase;
                         pointer-events: none;
+                        white-space: nowrap;
                     }
 
                     input[type=submit] {
@@ -84,7 +85,7 @@
     position:fixed;
     top:50%;
     left:50%;
-    width:55%;
+    width:65%;
     transform:translate(-50%, -50%) skew(-10deg);
     background-color:$black;
     @include redboxshadow;
@@ -124,6 +125,7 @@
 
             .subtitle {
                 margin:0;
+                padding:0 3rem;
             }
 
             .contain_form {

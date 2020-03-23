@@ -10,9 +10,9 @@
             <div class="line">
               <p class="nickname">{{mbone.nickname}}</p>
               <ul class="socials">
-                <li v-if="mboneSocials.twitter" class="twitter"><a :href="mboneSocials.twitter" title="Follow the band on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
-                <li v-if="mboneSocials.instagram" class="instagram"><a :href="mboneSocials.instagram" title="Follow the band on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
-                <li v-if="mboneSocials.facebook" class="facebook"><a :href="mboneSocials.facebook" title="Follow the band on Facebook (New Window)" target="_blank"><span class="show-for-sr">Facebook</span></a></li>
+                <li v-if="mboneSocials.twitter" class="twitter"><a :href="mboneSocials.twitter" title="Follow Remington on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
+                <li v-if="mboneSocials.instagram" class="instagram"><a :href="mboneSocials.instagram" title="Follow Remington on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
+                <li v-if="mboneSocials.facebook" class="facebook"><a :href="mboneSocials.facebook" title="Follow Remington on Facebook (New Window)" target="_blank"><span class="show-for-sr">Facebook</span></a></li>
               </ul>
             </div>
             <p class="role">{{mbone.role}}</p>
@@ -22,9 +22,9 @@
             <div class="line">
               <p class="nickname">{{mbtwo.nickname}}</p>
               <ul class="socials">
-                <li v-if="mbtwoSocials.twitter" class="twitter"><a :href="mbtwoSocials.twitter" title="Follow the band on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
-                <li v-if="mbtwoSocials.instagram" class="instagram"><a :href="mbtwoSocials.instagram" title="Follow the band on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
-                <li v-if="mbtwoSocials.facebook" class="facebook"><a :href="mbtwoSocials.facebook" title="Follow the band on Facebook (New Window)" target="_blank"><span class="show-for-sr">Facebook</span></a></li>
+                <li v-if="mbtwoSocials.twitter" class="twitter"><a :href="mbtwoSocials.twitter" title="Follow Sebastian on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
+                <li v-if="mbtwoSocials.instagram" class="instagram"><a :href="mbtwoSocials.instagram" title="Follow Sebastian on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
+                <li v-if="mbtwoSocials.facebook" class="facebook"><a :href="mbtwoSocials.facebook" title="Follow Sebastian on Facebook (New Window)" target="_blank"><span class="show-for-sr">Facebook</span></a></li>
               </ul>
             </div>
             <p class="role">{{mbtwo.role}}</p>
@@ -34,9 +34,9 @@
             <div class="line">
               <p class="nickname">{{mbthree.nickname}}</p>
               <ul class="socials">
-                <li v-if="mbthreeSocials.twitter" class="twitter"><a :href="mbthreeSocials.twitter" title="Follow the band on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
-                <li v-if="mbthreeSocials.instagram" class="instagram"><a :href="mbthreeSocials.instagram" title="Follow the band on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
-                <li v-if="mbthreeSocials.facebook" class="facebook"><a :href="mbthreeSocials.facebook" title="Follow the band on Facebook (New Window)" target="_blank"><span class="show-for-sr">Facebook</span></a></li>
+                <li v-if="mbthreeSocials.twitter" class="twitter"><a :href="mbthreeSocials.twitter" title="Follow Emerson on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
+                <li v-if="mbthreeSocials.instagram" class="instagram"><a :href="mbthreeSocials.instagram" title="Follow Emerson on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
+                <li v-if="mbthreeSocials.facebook" class="facebook"><a :href="mbthreeSocials.facebook" title="Follow Emerson on Facebook (New Window)" target="_blank"><span class="show-for-sr">Facebook</span></a></li>
               </ul>
             </div>
             <p class="role">{{mbthree.role}}</p>
@@ -138,7 +138,7 @@ export default {
       goodbyeAnim: function() {
         setTimeout( function(){ 
         document.querySelector('.img').classList.remove('opentobottom','delay'); 
-        document.querySelector('.img').style.height = '100vh';
+        document.querySelector('.img').style.height = '110vh';
         }, 3000);
       }
   }

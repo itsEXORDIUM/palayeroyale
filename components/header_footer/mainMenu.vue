@@ -2,7 +2,7 @@
     <div id="mainMenu">
       <div class="wrap">
         <ul class="sideMenu">
-          <!-- Insérer menu secondaire ici -->
+          <li v-if="!ticketLink"><a id="ticket_link" href="https://www.bandsintown.com/a/2390644-palaye-royale" class="action" title="Get tickets (New Window)" target="_blank"><span>Tickets</span></a></li>
           <ul class="socials">
             <li class="twitter"><a href="http://twitter.com/palayeroyale" title="Follow the band on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
             <li class="instagram"><a href="http://instagram.com/palayeroyale" title="Follow the band on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
@@ -29,7 +29,8 @@ export default {
   components: {
   },
   props: {
-    backgroundMenu: String
+    backgroundMenu: String,
+    ticketLink: Boolean
   },
   methods: {
     closeMenu: function() {

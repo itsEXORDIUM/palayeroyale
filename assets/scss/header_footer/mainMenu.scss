@@ -7,8 +7,7 @@
     left:0;
     background-color:$black;
     display:flex;
-    align-items: flex-start;
-    // transition:all .4s ease-in-out;
+    align-items: center;
     transition: all .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
     overflow:hidden;
 
@@ -18,12 +17,18 @@
 
     .wrap {
         width:95rem;
-        margin-top: 1.563rem;
-        height:85vh;
         display:flex;
         justify-content: space-between;
         align-items: flex-end;
         position:relative;
+
+        .sideMenu {
+            padding-bottom: 1rem;
+
+            > li {
+                margin-bottom:2rem;
+            }
+        }
 
         .pages {
             li {
@@ -31,7 +36,7 @@
                     font-family:'firasans_bold', Arial, Helvetica, sans-serif;
                     color:transparent;
                     text-transform: uppercase;
-                    font-size:10em;
+                    font-size:9em;
                     line-height:1.2em;
                     -webkit-text-stroke: 3px $white;
                     position:relative;
