@@ -1,0 +1,45 @@
+#edito {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 8rem;
+
+    .content {
+        max-width:60%;
+        flex:0 0 60%;
+        position: relative;
+        margin-bottom:6.25rem;
+
+        h1 {
+            font-family: 'firasans_bold', arial, helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 6.25rem;
+            line-height: 1em;
+            text-transform: uppercase;
+            width:140%;
+            color:$white;
+            margin-top:0;
+            margin-bottom:2.5rem;
+        }
+
+        .content_type {
+            font-family: 'firasans_regular', arial, helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 2em;
+            line-height: 1.4em;
+            color:$grey;
+            margin-bottom:6.25rem;
+        }
+    }
+
+    > img {
+        position:fixed;
+        top:0;
+        right:0;
+        width:39%;
+        height:100vh;
+        object-fit: cover;
+        -webkit-clip-path: polygon(0 100%,100% 100%,100% 0,10% 0px);
+        z-index:-1;
+    }
+}
