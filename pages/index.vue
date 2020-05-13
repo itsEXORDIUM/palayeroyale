@@ -1,9 +1,10 @@
 <template>
-  <div id="page" class="home">
+  <main id="page" class="home">
     <div id="cover_img">
       <img :src="featuredImage" alt=""/>
-      <div class="bloc_titre_logo">
-        <h1>Palaye Royale</h1>
+      <div class="bloc_titre_logo wrap">
+        <h1><span class="show-for-sr">Palaye Royale <span>The Bastards</span></span></h1>
+        
       </div>
     </div>
     <div class="mini_modules wrap">
@@ -13,7 +14,7 @@
     <tourDates :tourPoster="tourPoster" :tourDates="tourDates" :home="home"/>
     <news :news="news" :home="home"/>
     <newsletter :newsletterImg="newsletterImg" :popin="popin"/>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -50,8 +51,8 @@ export default {
       google_play: '',
       amazon_music: '',
       itunes: '',
-      firstVideo: [],
-      secondVideo: [],
+      firstVideo: {},
+      secondVideo: {},
       tourPoster: '',
       tourDates: [],
       newsletterImg: '',
@@ -96,9 +97,15 @@ export default {
         this.news = response.data;
       })
 
-    document.getElementById('cover_img').classList.add('opentobottom','light_delay');
-    document.getElementById('latest_videos').classList.add('fadein','delay_one');
-    document.getElementById('latest_song').classList.add('fadein','delay_two');
+    this.apparitions();
+  },
+  methods: {
+    apparitions: function() {
+      document.getElementById('latest_videos').classList.add('bloc_home','fadein','delay_one');
+      document.getElementById('cover_img').classList.add('opentobottomtwo','light_delay');
+      document.getElementById('latest_song').classList.add('fadein','delay_two');
+      document.querySelector('main').classList.add('fadein','delay_big');
+    }
   }
 }
 </script>

@@ -1,9 +1,9 @@
 header {
-    top:1.563rem;
+    top:2.5rem;
     position: sticky;
     width:100%;
     height:0;
-    margin-bottom:-3.125rem;
+    margin-bottom:-5rem;
     display: flex;
     align-items: center;
     z-index:100;
@@ -22,5 +22,5 @@ header {
 
 @keyframes openheader {
     0%{height:0;}
-    100%{height:3.125rem;}
+    100%{height:5rem;}
 }

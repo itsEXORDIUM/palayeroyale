@@ -4,8 +4,10 @@
     overflow: hidden;
     clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 29% 100%, 0% 90%);
     position:relative;
-    z-index:-1;
-    margin-bottom:-17rem;
+    z-index:0;
+    margin-bottom:-30vh;
+    display: flex;
+    align-items: center;
 
     img {
         width:100%;
@@ -16,22 +18,43 @@
         width:100%;
         height:auto;
         opacity:0.9;
+        z-index:-1;
     }
 
     .bloc_titre_logo {
-        height:25.25rem;
         position:relative;
-        margin-top:20vh;
-        animation: runwaylogo 20s linear infinite;
+        display: flex;
+        justify-content: flex-end;
+        z-index:0;
+        width:100%;
 
         h1 {
-            position:absolute;
-            top:0;
-            left:0;
-            width:100vw;
+            position:relative;
+            width:40%;
             height:100%;
-            text-indent: -9999rem;
-            background: url('../svgs/LOGO.svg') no-repeat left center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.5);
+            padding: 2rem 1rem;
+            
+            &::before {
+                content:'';
+                display: block;
+                width:100%;
+                height:10rem;
+                background: url('../svgs/PALAYEROYALE.svg') no-repeat center center;
+                margin-bottom: -2rem;
+            }
+
+            &::after {
+                content:'';
+                display: block;
+                width:55%;
+                height:10rem;
+                background: url('../svgs/THEBASTARDS.svg') no-repeat center center;
+            }
         }
     }
 }

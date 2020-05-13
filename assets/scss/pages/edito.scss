@@ -2,24 +2,24 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 8rem;
+    padding-top: 12.8rem;
 
     .content {
         max-width:60%;
         flex:0 0 60%;
         position: relative;
-        margin-bottom:6.25rem;
+        margin-bottom:10rem;
 
         h1 {
             font-family: 'firasans_bold', arial, helvetica, sans-serif;
             font-weight: normal;
-            font-size: 6.25rem;
+            font-size: 10em;
             line-height: 1em;
             text-transform: uppercase;
             width:140%;
             color:$white;
             margin-top:0;
-            margin-bottom:2.5rem;
+            margin-bottom:4rem;
         }
 
         .content_type {
@@ -28,7 +28,22 @@
             font-size: 2em;
             line-height: 1.4em;
             color:$grey;
-            margin-bottom:6.25rem;
+            margin-bottom:10rem;
+
+            a {
+                text-decoration-line: underline;
+            }
+
+            blockquote {
+                color:$white;
+                font-family: 'firasans_semibold', Arial, Helvetica, sans-serif;
+                font-size: 2.2em;
+                line-height: 1.2em;
+
+                p {
+                    font-size: 1em;
+                }
+            }
         }
     }
 

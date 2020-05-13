@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header :backgroundMenu="backgroundMenu"/>
+        <Header/>
         <nuxt/>
         <Footer/>
         <popinNewsletter/>
@@ -18,8 +18,7 @@ export default {
   },
   data() {
     return {
-      siteData: [],
-      backgroundMenu: ''
+      siteData: []
     }
   },
   mounted() {
@@ -27,7 +26,6 @@ export default {
     axios.get('http://51.15.241.193/wp-json/')
       .then(response => {
           this.siteData = response.data;
-          this.activePage();
       })
 
     // Scroll event
@@ -37,12 +35,6 @@ export default {
         } else if (document.documentElement.scrollTop < 300 || document.body.scrollTop < 300) {
           document.body.classList.remove('backgroundHeader');
         }
-    }
-  },
-  methods: {
-    activePage : function () {
-      var activePage = document.getElementById('page').className;
-      this.backgroundMenu = activePage;
     }
   }
 }

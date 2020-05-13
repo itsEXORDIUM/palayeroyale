@@ -1,5 +1,5 @@
 .royaltv {
-    min-height:calc(100vh - 5rem);
+    min-height:calc(100vh - 8rem);
     position:relative;
     
     &::before {
@@ -18,7 +18,11 @@
 
     #royaltv {
         margin-top:0;
-        padding-top:8rem;
+        padding-top:12.8rem;
+
+        .bloc_title {
+            opacity:0;
+        }
 
         .subtitle {
             color:$white;
@@ -29,27 +33,152 @@
             justify-content: space-between;
 
             .episodes {
-                max-width:40%;
-                flex:0 0 40%;
-                background-color: #fff;
+                max-width:35%;
+                flex:0 0 35%;
+                background-color: $black;
+                height:55vh;
+                opacity:0;
+
+                .the_seasons {
+                    margin:3rem 1rem 3rem 0;
+                    overflow:auto;
+                    height:calc(100% - 6rem);
+
+                    .a_season {
+                        margin-right:2rem;
+
+                        &.opened {
+                            .season_title {
+                                button {
+                                    &::after {
+                                        transform:translateY(-50%) rotate(180deg);
+                                    }
+                                }
+                            }
+                            ul {
+                                height:auto;
+                                overflow:visible;
+                            }
+                        }
+
+                        .season_title {
+                            font-family:'firasans_Bold', Arial, Helvetica, sans-serif;
+                            color:$white;
+                            font-size: 2.4em;
+                            line-height: 1.2em;
+                            margin: 0;
+                            margin-bottom: 2rem;
+                            padding-bottom: 2rem;
+                            border-bottom:0.1rem solid $grey;
+                            padding-left:2.5rem;
+
+                            button {
+                                position:relative;
+                                width:100%;
+                                text-align: left;
+                                text-transform: uppercase;
+
+                                &::after {
+                                    content:'';
+                                    display: block;
+                                    position:absolute;
+                                    width:3.8rem;
+                                    height:3.8rem;
+                                    background:url('../svgs/ARROW.svg') no-repeat center center;
+                                    background-size:contain;
+                                    top:50%;
+                                    transform: translateY(-50%);
+                                    right:5rem;
+                                    transform-origin: center center;
+                                }
+                            }
+                        }
+
+                        > ul {
+                            padding-left:2.5rem;
+                            margin-bottom:4rem;
+                            height:0;
+                            overflow:hidden;
+
+                            li {
+                                &:not(:last-of-type) {
+                                    h3 {
+                                        padding-bottom:2.7rem;
+                                    }
+                                }
+
+                                h3 {
+                                    font-size: 1em;
+                                    margin: 0;
+
+                                    button {
+                                        width:100%;
+                                        display: flex;
+                                        flex-direction: row-reverse;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        font-family:'firasans_Bold', Arial, Helvetica, sans-serif;
+                                        color:$grey;
+                                        font-size: 2em;
+                                        line-height: 1.2em;
+                                        text-transform: uppercase;
+                                        transition: color .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+
+                                        &:hover {
+                                            color:$white;
+                                        }
+
+                                        .action {
+                                            font-size: 2rem;
+                                        }
+                                    }
+
+                                    &.unavailable {
+                                        font-family:'firasans_Bold', Arial, Helvetica, sans-serif;
+                                        color:$grey;
+                                        font-size: 2em;
+                                        line-height: 1.2em;
+                                        text-transform: uppercase;
+                                        font-style: italic;
+                                        opacity:0.7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             .tv_links {
-                max-width:55%;
-                flex:0 0 55%;
+                max-width:60%;
+                flex:0 0 60%;
                 height:55vh;
-                background-color: #fff;
+                opacity:0;
 
                 .tv {
                     width:100%;
+                    height:90%;
                     position:relative;
+
+                    iframe {
+                        margin-left: 5rem;
+                        margin-top: 1rem;
+                    }
 
                     img {
                         position:absolute;
                         top:0;
                         left:0;
-                        width:100%;
+                        max-width:100%;
+                        height:calc(55vh - 2.5rem);
+                        pointer-events: none;
+                        filter:grayscale(100%);
                     }
+                }
+
+                .big_action {
+                    display: flex;
+                    justify-content: center;
                 }
             }
         }

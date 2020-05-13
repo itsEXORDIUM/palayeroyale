@@ -1,5 +1,5 @@
 <template>
-    <div class="dates">
+    <div id="dates" class="">
       <div class="tour_line" v-for="(date, index) in tourDates" :key="index">
         <div class="date">
           <span class="weekday">{{date.acf.tour_date.week_day}}</span>
@@ -29,9 +29,6 @@ export default {
   props: {
     tourPoster: String,
     tourDates: Array
-  },
-  mounted() {
-    document.querySelector('.dates').classList.add('fadein','delay_two');
   }
 }
 </script>

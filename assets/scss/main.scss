@@ -1,3 +1,7 @@
+:root {
+    font-size:10px;
+}
+
 /*** VARIABLES ***/
 @import 'variables/colors';
 @import 'variables/fonts';
@@ -43,7 +47,7 @@
 
 body {
     background-color: $black;
-    color: $white;
+    color: $grey;
     font-family: 'firasans_regular', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     width:100vw;
@@ -69,6 +73,10 @@ body {
                 z-index:110;
             }
         }
+    }
+
+    &.lineheight {
+        line-height: 1.5em;
     }
 }
 a, button {
@@ -96,7 +104,7 @@ input[type=text]:focus {
 
 /** WRAP **/
 .wrap {
-    max-width:90rem;
+    max-width:152rem;
     margin: 0 auto;
 }
 

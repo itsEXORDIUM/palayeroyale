@@ -3,7 +3,7 @@ footer {
     justify-content:center;
     align-items:center;
     background-color:$light_grey;
-    padding:1.875rem 0;
+    padding:3rem 0;
 
     .socials {
         li {
@@ -14,14 +14,14 @@ footer {
     }
 
     .legals {
-        margin-left:15.625rem;
+        margin-left:25rem;
         display:flex;
         align-items: center;
         font-family: 'firasans', arial, helvetica, sans-serif;
         text-transform: uppercase;
 
         li {
-            font-size:1rem;
+            font-size:1.6em;
             line-height:1.2em;
 
             a {
@@ -29,11 +29,11 @@ footer {
             }
 
             &:not(:first-of-type) {
-                margin-left:0.625rem;
+                margin-left:1rem;
 
                 &::before {
                     content: "|";
-                    padding-right:0.625rem;
+                    padding-right:1rem;
                 }
             }
         }

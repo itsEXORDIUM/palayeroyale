@@ -1,6 +1,6 @@
 <template>
     <header>
-        <uiNav :backgroundMenu="backgroundMenu"/>
+        <uiNav/>
         <accessPanel/>
     </header>
 </template>
@@ -12,9 +12,6 @@ import accessPanel from '~/components/header_footer/Access'
 export default {
   components: {
       uiNav, accessPanel
-  },
-  props: {
-    backgroundMenu: String
   }
 }
 </script>

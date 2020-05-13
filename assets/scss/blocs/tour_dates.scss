@@ -2,7 +2,7 @@
     #tour_dates {
         .content {
             .title_home {
-                margin-bottom:-2.500rem;
+                margin-bottom:-4rem;
             }
         }
 
@@ -14,21 +14,21 @@
 }
 
 .tourdates {
-    min-height:calc(100vh - 5rem);
+    min-height:calc(100vh - 8rem);
 
     #tour_dates {
         .title_home {
-            margin-bottom:2.5rem;
+            margin-bottom:4rem;
             opacity:0;
         }
 
         .dates {
-            margin-bottom:6.25rem;
+            margin-bottom:10rem;
             opacity:0;
         }
 
-        padding-top:11.25rem;
-        padding-bottom:6.25rem;
+        padding-top:18rem;
+        padding-bottom:10rem;
         margin-top:0;
     }
 }
@@ -41,11 +41,12 @@
     .content {
         max-width:70%;
         flex: 0 0 70%;
-        padding-left:5.3125rem;
+        padding-left:8.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
+        color:$white;
 
         .dates {
             width:100%;
@@ -54,7 +55,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: .9375rem .5rem;
+                padding: 1.5rem .8rem;
                 background-image: linear-gradient(135deg, $dark_grey 0%, $dark_grey 50%, transparent 50.1%);
                 background-size: 0% 100%;
                 background-repeat: no-repeat;
@@ -118,7 +119,7 @@
                 .guests {
                     flex: 0 0 20%;
                     max-width:20%;
-                    padding:0 1rem;
+                    padding:0 1.6rem;
                     span {
                         font-family:'firasans_bold', Arial, Helvetica, sans-serif;
                         font-size: 1.8em;

@@ -1,15 +1,15 @@
 .aboutPage {
-    min-height:calc(100vh - 5rem);
+    min-height:calc(100vh - 8rem);
     position: relative;
 
     .bloc_home {
         margin-top:0;
-        padding-top:8rem;
-        margin-bottom:6.25rem;
+        padding-top:12.8rem;
+        margin-bottom:10rem;
         height:100vh;
 
         .bloc_title {
-            margin-bottom:4.688rem;
+            margin-bottom:7.5rem;
 
             .title_home {
                 width:50%;
@@ -26,7 +26,7 @@
 
                 &:hover {
                     .line {
-                        height:3rem;
+                        height:4.8rem;
                     }
 
                     .name {
@@ -35,7 +35,7 @@
                 }
 
                 &:not(:first-of-type) {
-                    padding-top:4.813rem;
+                    padding-top:7.7rem;
                 }
 
                 &.remi {
@@ -129,7 +129,7 @@
     .imgs {
         display: flex;
         justify-content: space-between;
-        margin-bottom:6.25rem;
+        margin-bottom:10rem;
 
         .img_container {
             max-width:49%;
@@ -152,9 +152,24 @@
     }
 
     .aboutText {
-        margin-bottom:6.25rem;
+        margin-bottom:10rem;
         column-count: 3;
-        column-gap: 5.313rem;
+        column-gap: 8.5rem;
         height:100%;
+        font-size: 1.6em;
+        line-height: 1.4em;
+
+        > p:first-of-type {
+            margin-top: 0;
+        }
+
+        img {
+            max-width:100%;
+            height:auto;
+            transform:skew(-10deg);
+            @include redboxshadow;
+            border-style:inset;
+            @include whiteborder;
+        }
     }
 }

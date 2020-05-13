@@ -6,11 +6,11 @@
 
             .news_card {
                 width:30%;
-                height:28.75rem;
+                height:46rem;
 
                 .content {
                     transition: opacity .3s ease-in-out .3s;
-                    padding:1.875rem 8rem;
+                    padding:3rem 12.8rem;
                 }
 
                 &.hover_card {
@@ -20,7 +20,7 @@
         }
 
         .big_action {
-            margin-top:2.5rem;
+            margin-top:4rem;
             text-align: center;
         }
     }
@@ -34,25 +34,25 @@
     
             .news_card {
                 width:19.5%;
-                height:18.75rem;
+                height:30rem;
                 @include whiteborder;
                 border-style: inset;
     
                 .content {
-                    padding:1.25rem 4rem;
+                    padding:2rem 6.4rem;
     
                     .title {
-                        max-height:3.5rem;
+                        max-height:5.6rem;
                         overflow:hidden;
                     }
     
                     .subtitle {
-                        max-height: 9.6rem;
+                        max-height: 15.3rem;
                         overflow: hidden;
                     }
     
                     .action {
-                        margin-top:1.2rem;
+                        margin-top:1.9rem;
                     }
                 }
     
@@ -71,15 +71,15 @@
         display: flex;
         overflow: hidden;
         justify-content: center;
-        margin-left:-3rem;
-        margin-right:-3rem;
+        margin-left:-4.8rem;
+        margin-right:-4.8rem;
     
         .news_card {
             position:relative;
             transform:skew(-10deg);
             overflow:hidden;
             width:30%;
-            height:28.75rem;
+            height:46rem;
             transition: width .3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
     
             &.hover_card {
@@ -117,13 +117,13 @@
                     
                     p {
                         margin: 0;
-                        margin-top: 0.625rem;
+                        margin-top: 1rem;
                     }
                 }
         
                 .action {
                     margin-left: auto;
-                    margin-top:1.875rem;
+                    margin-top:3rem;
                     display: block;
                     width:fit-content;
         

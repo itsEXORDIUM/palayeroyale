@@ -1,19 +1,28 @@
 /*** BLOCS HOME ***/
 .bloc_title, .bloc_title.wrap {
-    margin-bottom:2.5rem;
+    margin-bottom:4rem;
 }
 
 .bloc_home .title_home {
     font-family:'unifrakturmaguntia', 'firasans_Bold', Arial, Helvetica, sans-serif;
-    font-size:6rem;
+    font-size:9.6em;
     line-height:1em;
     color:$white;
     margin:0;
     font-weight: normal;
 }
 
+.title_home {
+    font-family:'unifrakturmaguntia', 'firasans_Bold', Arial, Helvetica, sans-serif;
+}
+
+body.fira .title_home {
+    font-family: 'firasans_Bold', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
 #page:not(.home) .bloc_home .title_home {
-    font-size:5rem;
+    font-size:8rem;
 }
 
 .bloc_home .subtitle {
@@ -31,7 +40,7 @@
 
 .bloc_home .title_home {
     +.subtitle {
-        margin-left:4.6875rem;
-        margin-right:1rem;
+        margin-left:7.5rem;
+        margin-right:1.6rem;
     }
 }

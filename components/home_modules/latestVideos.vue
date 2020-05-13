@@ -1,5 +1,5 @@
 <template>
-    <div id="latest_videos" class="bloc_home">
+    <div id="latest_videos" class="">
         <h2 class="title_home">Latest Videos</h2>
         <ul>
           <li>

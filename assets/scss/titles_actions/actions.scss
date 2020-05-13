@@ -6,7 +6,7 @@
     line-height:100%;
     background-color:$white;
     text-transform: uppercase;
-    padding:0.2rem 2rem;
+    padding:0.3rem 3.2rem;
     transform:skew(-10deg);
     @include redboxshadow;
     transition: all .3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
@@ -18,7 +18,7 @@
     }
 
     &.small_action {
-        padding:0.2rem 1rem;
+        padding:0.3rem 1.6rem;
     }
 
     &:hover {
@@ -29,7 +29,7 @@
 .big_action {
     .action {
         font-size: 3em;
-        padding:0.5rem 3rem;
+        padding:0.8rem 4.8rem;
         transform:skew(-20deg);
 
         span {

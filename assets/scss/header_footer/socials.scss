@@ -5,37 +5,37 @@
     li {
         a {
             display:block;
-            height:1.25rem;
+            height:2rem;
             background-size:contain;
         }
 
         &.twitter a {
-            width:1.563rem;
+            width:2.5rem;
             background-image:url('../svgs/socialMedias/TWITTER.svg');
         }
 
         &.instagram a {
-            width:1.25rem;
+            width:2rem;
             background-image:url('../svgs/socialMedias/INSTAGRAM.svg');
         }
 
         &.facebook a {
-            width:0.625rem;
+            width:1rem;
             background-image:url('../svgs/socialMedias/FACEBOOK.svg');
         }
 
         &.bandsintown a {
-            width:1.25rem;
+            width:2rem;
             background-image:url('../svgs/socialMedias/BANDSINTOWN.svg');
         }
 
         &.spotify a {
-            width:1.25rem;
+            width:2rem;
             background-image:url('../svgs/socialMedias/SPOTIFY.svg');
         }
 
         &:not(:first-of-type) {
-            margin-left:1.25rem;
+            margin-left:2rem;
         }
     }
 }

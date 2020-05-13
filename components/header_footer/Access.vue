@@ -8,7 +8,7 @@
                     <div class="form_body">
                         <div class="form_line">
                             <label for="titleFont">Change Title Font</label>
-                            <input type="checkbox" id="titleFont"/>
+                            <input type="checkbox" id="titleFont" @click="changeFont()"/>
                             <span class="checkmark"></span>
                         </div>
 
@@ -20,7 +20,7 @@
 
                         <div class="form_line">
                             <label for="lineHeight">More line height</label>
-                            <input type="checkbox" id="lineHeight"/>
+                            <input type="checkbox" id="lineHeight" @click="lineHeight()"/>
                             <span class="checkmark"></span>
                         </div>
                     </div>
@@ -39,6 +39,14 @@ export default {
   methods: {
       openAccess: function() {
           document.getElementById('access_panel').classList.toggle('open');
+      },
+
+      changeFont: function() {
+        document.querySelector('body').classList.toggle('fira');              
+      },
+
+      lineHeight: function() {
+        document.querySelector('body').classList.toggle('lineheight'); 
       }
   }
 }
