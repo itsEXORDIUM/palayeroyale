@@ -37,11 +37,88 @@
             blockquote {
                 color:$white;
                 font-family: 'firasans_semibold', Arial, Helvetica, sans-serif;
-                font-size: 2.2em;
+                font-size: 2.2rem;
                 line-height: 1.2em;
+                padding-left:12rem;
+                background:url('../svgs/QUOTE.svg') no-repeat left center;
+                background-size: 7rem 5rem;
+                margin: 7rem 5rem 7rem 10rem;
 
                 p {
                     font-size: 1em;
+                    line-height: 1.2em;
+                }
+            }
+
+            h2 {
+                font-family: 'firasans_bold', arial, helvetica, sans-serif;
+                font-size: 3rem;
+                line-height: 1.2em;
+                color:$white;
+            }
+
+            h3 {
+                font-family: 'firasans_bold', arial, helvetica, sans-serif;
+                font-size: 2.6rem;
+                line-height: 1.2em;
+                color:$white;
+            }
+
+            h4 {
+                font-family: 'firasans_bold', arial, helvetica, sans-serif;
+                font-size: 2.4rem;
+                line-height: 1.2em;
+                color:$white;
+            }
+
+            h5 {
+                font-family: 'firasans_bold', arial, helvetica, sans-serif;
+                font-size: 2.2rem;
+                line-height: 1.2em;
+                color:$white;
+            }
+
+            h6 {
+                font-family: 'firasans_bold', arial, helvetica, sans-serif;
+                font-size: 2rem;
+                line-height: 1.2em;
+                color:$white;
+            }
+
+            figure {
+                margin: 0;
+            }
+
+            iframe {
+                width:100%;
+                min-height:50rem;
+            }
+
+            ul {
+                padding-left:10rem;
+
+                li::before {
+                    content: "\2022";
+                    color: $red;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1em;
+                  }
+            }
+
+            table {
+                background-color:rgba($white, 0.05);
+                width:100%;
+                border:1px solid $dark_grey;
+                border-bottom:0;
+                border-left:0;
+
+                td {
+                    border:1px solid $dark_grey;
+                    border-top:0;
+                    border-right:0;
+                    padding:1rem;
                 }
             }
         }

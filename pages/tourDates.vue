@@ -1,5 +1,5 @@
 <template>
-    <div id="page" class="tourdates">
+    <div id="page" class="tourdates" role="main">
         <div class="imgs">
             <img :src="featuredImage" alt=""/>
             <img :src="img_one" alt=""/>

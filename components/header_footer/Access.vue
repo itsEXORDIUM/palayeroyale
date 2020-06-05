@@ -11,18 +11,6 @@
                             <input type="checkbox" id="titleFont" @click="changeFont()"/>
                             <span class="checkmark"></span>
                         </div>
-
-                        <div class="form_line">
-                            <label for="dyslexia">Dyslexia</label>
-                            <input type="checkbox" id="dyslexia"/>
-                            <span class="checkmark"></span>
-                        </div>
-
-                        <div class="form_line">
-                            <label for="lineHeight">More line height</label>
-                            <input type="checkbox" id="lineHeight" @click="lineHeight()"/>
-                            <span class="checkmark"></span>
-                        </div>
                     </div>
                 </fieldset>
             </form>
@@ -43,10 +31,6 @@ export default {
 
       changeFont: function() {
         document.querySelector('body').classList.toggle('fira');              
-      },
-
-      lineHeight: function() {
-        document.querySelector('body').classList.toggle('lineheight'); 
       }
   }
 }

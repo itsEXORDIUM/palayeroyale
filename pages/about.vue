@@ -1,10 +1,10 @@
 <template>
-    <div id="page" class="aboutPage">
+    <div id="page" class="aboutPage" role="main">
       <div class="bloc_home">
         <div class="bloc_title wrap">
-          <h1 class="title_home">{{pageTitle}}</h1>
+          <h1>{{pageTitle}}</h1>
         </div>
-        <div class="bandmembers wrap">
+        <div>
           <div class="bandmember remi" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
             <p class="name">{{mbone.name}}</p>
             <div class="line">
@@ -42,7 +42,7 @@
             <p class="role">{{mbthree.role}}</p>
           </div>
         </div>
-        <div class="img bandMb">
+        <div>
           <img :src="featuredImage" alt=""/>
         </div>
       </div>
@@ -106,10 +106,10 @@ export default {
             this.aboutText = response.data.content.rendered;
         })
 
-      document.querySelector('.title_home').classList.add('fadein','delay_one');
-      document.querySelector('.img').classList.add('opentobottom','delay');
+      document.querySelector('.bloc_title h1').classList.add('title_home','fadein','delay_one');
+      document.querySelector('.bloc_home>div:last-of-type').classList.add('img','bandMb','opentobottom','delay');
       this.goodbyeAnim();
-      document.querySelector('.bandmembers').classList.add('fadein','delay_two');
+      document.querySelector('.bloc_home>div:nth-of-type(2)').classList.add('bandmembers','wrap','fadein','delay_two');
   },
   methods: {
       mbImg: function (event) {

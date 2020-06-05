@@ -1,5 +1,5 @@
 <template>
-    <div id="page" class="newsPage">
+    <div id="page" class="newsPage" role="main">
         <news :news="news" :home="home" :pageTitle="pageTitle"/>
     </div>
 </template>

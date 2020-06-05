@@ -1,5 +1,5 @@
 <template>
-  <main id="page" class="home">
+  <main id="page" class="home" role="main">
     <div id="cover_img">
       <img :src="featuredImage" alt=""/>
       <div class="bloc_titre_logo wrap">

@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer role="contentinfo">
         <ul class="socials">
             <li class="twitter"><a href="http://twitter.com/palayeroyale" title="Follow the band on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
             <li class="instagram"><a href="http://instagram.com/palayeroyale" title="Follow the band on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>

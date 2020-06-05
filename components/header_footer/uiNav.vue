@@ -1,6 +1,6 @@
 <template>
     <nav class="wrap" role="navigation">
-        <button id="btn_menu" @click="openMenu($event)">
+        <button id="btn_menu" tabindex="0" aria-label="Open or close the menu" aria-pressed="false" role="button" @click="openMenu($event)">
             <span class="btn"></span>
             <span>Menu</span>
         </button>
@@ -16,12 +16,12 @@
                 </ul>
                 </ul>
                 <ul class="pages" @click="closeMenu()">
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/">Home</nuxt-link></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/tourDates">Tour Dates</nuxt-link></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link  to="/royalTelevision">Bastards Television</nuxt-link></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/news">News</nuxt-link></li>
+                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/" title="Go to the Index page">Home</nuxt-link></li>
+                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/tourDates" title="Go to the Tour Dates page">Tour Dates</nuxt-link></li>
+                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link  to="/royalTelevision" title="Go to the Vlog page">Bastards Television</nuxt-link></li>
+                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/news" title="Go to the News page">News</nuxt-link></li>
                 <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><a href="http://smarturl.it/HangOnToYourself" target="_blank" title="Go to the music page (New Window)" class="">Music</a></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/about">About</nuxt-link></li>
+                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/about"  title="Go to the About page">About</nuxt-link></li>
                 </ul>
             </div>
             <img v-if="this.activepage === 'Home'" src="~/assets/img/menu/home.jpg" alt=""/>
@@ -66,12 +66,14 @@ export default {
                 sideMenu.prepend(ticketLink);
                 this.$el.querySelector('.btn').classList.add('toCross');
                  document.body.classList.add('popin_open');
+                 document.getElementById('btn_menu').setAttribute('aria-pressed', true);
             } else {
                 this.$el.querySelector('span:not(.btn)').innerHTML = "Menu";
                 ticketLink.remove();
                 secondaryMenu.prepend(ticketLink);
                 this.$el.querySelector('.btn').classList.remove('toCross');
                  document.body.classList.remove('popin_open');
+                 document.getElementById('btn_menu').setAttribute('aria-pressed', false);
             }        
 
         this.getActivePage();
@@ -89,7 +91,8 @@ export default {
         document.querySelector('#btn_menu span.btn').classList.remove('toCross');
         ticketLink.remove();
         secondaryMenu.prepend(ticketLink);
-        },
+        document.getElementById('btn_menu').setAttribute('aria-pressed', false);
+    },
     changeBackground: function(event) {
         var active = event.target.closest('a');
         if(active) {
