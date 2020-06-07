@@ -1,5 +1,8 @@
 #latest_song {
     opacity:0; 
+    @media screen and (max-width: $small-compt) {
+        width:45%;
+    }
 
     .content {
         display: flex;

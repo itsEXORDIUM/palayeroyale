@@ -26,6 +26,11 @@
                         font-size: 2em;
                         color:$grey;
                         padding-left:3rem;
+
+                        @media screen and (max-width: $small-compt) {
+                            height:5.5rem;
+                            font-size:1.8em;
+                        }
                     }
 
                     p {
@@ -59,11 +64,20 @@
                         text-transform: uppercase;
                         pointer-events: none;
                         white-space: nowrap;
+
+                        @media screen and (max-width: $small-compt) {
+                            font-size:2.4em;
+                        }
                     }
 
                     input[type=submit] {
                         width:22.8rem;
                         text-indent: -9999em;
+                        border:none;
+
+                        @media screen and (max-width: $small-compt) {
+                            width:18rem;
+                        }
                     }
                 }
             }
@@ -77,6 +91,10 @@
         object-fit: cover;
         @include whiteborder;
         filter:grayscale(100%);
+
+        @media screen and (max-width: $small-compt) {
+            height:23.5rem;
+        }
     }
 }
 
@@ -92,6 +110,11 @@
     @include whiteborder;
     padding:5rem 24rem;
     z-index:9999;
+
+    @media screen and (max-width: $small-compt) {
+        width:85%;
+        padding:10rem;
+    }
 
     #close_popin {
         display:block;
@@ -135,11 +158,19 @@
                     flex: 0 0 100%;
                     max-width: 100%;
                     margin-top: 10rem;
+
+                    @media screen and (max-width: $small-compt) {
+                        margin-top: 5rem;
+                    }
                 }
 
                 .big_action {
                     margin-left:auto;
                     margin-top: 10.5rem;
+
+                    @media screen and (max-width: $small-compt) {
+                        margin-top: 5.5rem;
+                    }
                 }
             }
         }

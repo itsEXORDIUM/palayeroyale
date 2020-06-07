@@ -79,8 +79,12 @@ export default {
         this.getActivePage();
       },
       getActivePage:function() {
-        var pageActive = this.$el.querySelector('.nuxt-link-exact-active').textContent;
-        this.activepage = pageActive;
+        var pageActive = this.$el.querySelector('.nuxt-link-exact-active');
+        if(pageActive) {
+            this.activepage = pageActive.textContent;
+        } else {
+            this.activepage = 'News';
+        }
       },
       closeMenu: function() {
           var ticketLink = this.$el.querySelector('#ticket_link').parentNode;

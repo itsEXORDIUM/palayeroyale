@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 12.8rem;
+    min-height: calc(100vh - 8rem);
 
     .content {
         max-width:60%;
@@ -20,6 +21,10 @@
             color:$white;
             margin-top:0;
             margin-bottom:4rem;
+
+            @media screen and (max-width: $small-compt) {
+                font-size:8em;
+            }
         }
 
         .content_type {

@@ -29,14 +29,26 @@
 .newsPage {
     #news {
         .container_news {
-            justify-content: space-between;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             opacity:0;
+            margin-left:-2.8rem;
+            margin-right:-7.8rem;
+
+            @media screen and (max-width: $small-compt) {
+                margin-left: -2.8rem;
+                margin-right: -2.8rem;
+            }
     
             .news_card {
                 width:19.5%;
                 height:30rem;
                 @include whiteborder;
                 border-style: inset;
+
+                @media screen and (max-width: $small-compt) {
+                    width:33.333%;
+                }
     
                 .content {
                     padding:2rem 6.4rem;
@@ -102,6 +114,11 @@
                 background-color: rgba($black, 0.75);
                 opacity:0;
                 transition: opacity .3s ease-in-out;
+
+                @media screen and (max-width: $small-compt) {
+                    left:-10%;
+                    width:120%;
+                }
         
                 .title {
                     font-family: 'firasans_bold',arial,helvetica,sans-serif;

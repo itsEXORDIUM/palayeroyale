@@ -51,7 +51,7 @@ body {
     color: $grey;
     font-family: 'firasans_regular', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    width:100vw;
+    width:100%;
 
     &.popin_open {
         overflow:hidden;
@@ -110,6 +110,7 @@ input[type=text]:focus {
 
     @media screen and (max-width: $small-compt) {
         max-width:120rem;
+        padding:0 1rem;
     }
 }
 

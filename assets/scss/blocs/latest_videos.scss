@@ -1,6 +1,9 @@
 #latest_videos {
     margin-top:0;
-    opacity:0; 
+    opacity:0;
+    @media screen and (max-width: $small-compt) {
+        width:55%;
+    } 
     
     .title_home {
         text-shadow: 5px 5px 10px rgba($black, 0.5);

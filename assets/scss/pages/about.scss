@@ -8,8 +8,16 @@
         margin-bottom:10rem;
         height:100vh;
 
+        @media screen and (max-width: $small-compt) {
+            padding-top: 11rem;
+        }
+
         .bloc_title {
             margin-bottom:7.5rem;
+
+            @media screen and (max-width: $small-compt) {
+                margin-bottom: 6.5rem;
+            }
 
             .title_home {
                 width:50%;
@@ -24,6 +32,10 @@
                 width:50%;
                 cursor:pointer;
 
+                @media screen and (max-width: $small-compt) {
+                    width:60%;
+                }
+
                 &:hover {
                     .line {
                         height:4.8rem;
@@ -36,6 +48,10 @@
 
                 &:not(:first-of-type) {
                     padding-top:7.7rem;
+
+                    @media screen and (max-width: $small-compt) {
+                        padding-top: 6.7rem;
+                    }
                 }
 
                 &.remi {
@@ -71,6 +87,10 @@
                 -webkit-background-clip: text;
                 background-repeat: no-repeat;
                 transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+
+                @media screen and (max-width: $small-compt) {
+                    font-size: 6em;
+                }
             }
 
             .nickname {
@@ -81,6 +101,10 @@
                 text-transform: uppercase;
                 margin: 0;
                 letter-spacing:0.6em;
+
+                @media screen and (max-width: $small-compt) {
+                    letter-spacing: 0.3em;
+                }
             }
 
             .line {

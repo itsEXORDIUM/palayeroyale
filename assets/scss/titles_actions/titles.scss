@@ -10,6 +10,10 @@
     color:$white;
     margin:0;
     font-weight: normal;
+
+    @media screen and (max-width: $small-compt) {
+        font-size:7.5em;
+    }
 }
 
 .title_home {
