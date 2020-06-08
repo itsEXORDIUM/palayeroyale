@@ -4,11 +4,19 @@
     @media screen and (max-width: $small-compt) {
         width:55%;
     } 
+
+    @media screen and (max-width: $tablette) {
+        width:75%;
+    }
     
     .title_home {
         text-shadow: 5px 5px 10px rgba($black, 0.5);
         font-size:7.5em;
         margin: 0;
+
+        @media screen and (max-width: $tablette) {
+            font-size:5em;
+        }
     }
 
     ul {
@@ -33,6 +41,10 @@
 
             @media screen and (max-width: $small-compt) {
                 width:25rem;
+            }
+
+            @media screen and (max-width: $tablette) {
+                width:23rem;
             }
 
             img {

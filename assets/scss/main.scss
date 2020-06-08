@@ -46,6 +46,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    @media screen and (max-width: $tablette) {
+        font-size:8px;
+    }
+}
+
 body {
     background-color: $black;
     color: $grey;

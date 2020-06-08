@@ -24,6 +24,12 @@
             font-size:1.4em;
             padding:0.2rem 1rem;
         }
+
+        @media screen and (max-width: $phone) {
+            font-size:2em;
+        }
+
+        
     }
 
     &:hover {
@@ -33,7 +39,7 @@
 
 .big_action {
     @media screen and (max-width: $small-compt) {
-        padding: 0 2rem;
+        margin: 0 2rem;
     }
     .action {
         font-size: 3em;

@@ -13,6 +13,10 @@
         margin-bottom:-32vh;
     }
 
+    @media screen and (max-width: $phone) {
+        margin-bottom: 0;
+    }
+
     img {
         position:absolute;
         top:0;

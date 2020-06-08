@@ -36,6 +36,10 @@ export default {
           document.body.classList.remove('backgroundHeader');
         }
     }
+
+    if(window.innerWidth < 640) {
+      document.querySelector('body').classList.add('fira');
+    }
   }
 }
 </script>

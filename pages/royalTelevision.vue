@@ -55,7 +55,7 @@ export default {
             this.slug = this.seasons.season_one.episode_1.slug;
         })
 
-        document.querySelector('#royaltv>div:first-of-type').classList.add('bloc_title','fadein','delay');
+        document.querySelector('#royaltv>div:first-of-type').classList.add('bloc_title','hide-for-tab','fadein','delay');
         document.querySelector('.cinema>div:first-of-type').classList.add('episodes','fadein','delay_one');
         document.querySelector('.cinema>div:last-of-type').classList.add('tv_links','fadein','delay_two');
         document.querySelector('.tv img').classList.add('fadein','delay_two');

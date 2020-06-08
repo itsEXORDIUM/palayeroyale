@@ -2,8 +2,9 @@
     <nav class="wrap" role="navigation">
         <button id="btn_menu" tabindex="0" aria-label="Open or close the menu" aria-pressed="false" role="button" @click="openMenu($event)">
             <span class="btn"></span>
-            <span>Menu</span>
+            <span class="hide-for-phone">Menu</span>
         </button>
+        <nuxt-link to="/" class="logolink show-for-phone"><span class="show-for-sr">Home</span></nuxt-link>
         <div id="mainMenu">
             <div class="wrap">
                 <ul class="sideMenu">
@@ -16,7 +17,7 @@
                 </ul>
                 </ul>
                 <ul class="pages" @click="closeMenu()">
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/" title="Go to the Index page">Home</nuxt-link></li>
+                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()" class="hide-for-phone"><nuxt-link to="/" title="Go to the Index page">Home</nuxt-link></li>
                 <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/tourDates" title="Go to the Tour Dates page">Tour Dates</nuxt-link></li>
                 <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link  to="/royalTelevision" title="Go to the Vlog page">Bastards Television</nuxt-link></li>
                 <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/news" title="Go to the News page">News</nuxt-link></li>
@@ -32,7 +33,7 @@
             <img v-if="this.activepage === 'Music'" src="~/assets/img/menu/music.jpg" alt=""/>
         </div>
 
-        <ul id="secondaryMenu">
+        <ul id="secondaryMenu" class="hide-for-phone">
             <li><a id="ticket_link" href="https://www.bandsintown.com/a/2390644-palaye-royale" class="action" title="Get tickets (New Window)" target="_blank"><span>Tickets</span></a></li>
             <li><a href="https://www.palayeroyale.store/" target="_blank" title="Get merch (New Window)" class="merch"><span>Get Merch</span></a></li>
             <li><button class="newsletter" @click="openPopin()"><span>Subscribe</span> <span class="show-for-sr">to the newsletter</span></button></li>

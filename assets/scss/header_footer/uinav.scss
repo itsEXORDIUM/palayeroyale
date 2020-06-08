@@ -6,6 +6,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items:center;
+        position: relative;
     }
 }
 
@@ -91,6 +92,18 @@ header {
     }
 }
 
+// LOGO LINK
+nav .logolink {
+    width:20rem;
+    height:100%;
+    background: url('../svgs/PALAYEROYALE.svg') no-repeat center center;
+    background-size:cover;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+}
+
 // SECONDARY MENU
 #secondaryMenu {
     display:flex;
@@ -99,6 +112,10 @@ header {
     li {
         &:not(:first-of-type) {
             margin-left:5rem;
+
+            @media screen and (max-width: $tablette) {
+                margin-left:2rem;
+            }
         }
 
         a, button {

@@ -2,7 +2,7 @@
   <main id="page" class="home" role="main">
     <div id="cover_img">
       <img :src="featuredImage" alt=""/>
-      <div class="bloc_titre_logo wrap">
+      <div class="bloc_titre_logo wrap hide-for-phone">
         <h1><span class="show-for-sr">Palaye Royale <span>The Bastards</span></span></h1>
         
       </div>
@@ -66,7 +66,11 @@ export default {
     axios.get('http://51.15.241.193/wp-json/wp/v2/pages/10?_embed')
       .then(response => {
           this.homeData = response.data;
-          this.featuredImage = response.data._embedded['wp:featuredmedia']['0'].source_url;
+          if(window.innerWidth < 640) {
+              this.featuredImage = response.data.acf.featured_image_for_phone;
+          } else {
+            this.featuredImage = response.data._embedded['wp:featuredmedia']['0'].source_url;
+          }
 
           this.songTitle = response.data.acf.song_title;
           this.songCover = response.data.acf.song_cover;
@@ -98,6 +102,7 @@ export default {
       })
 
     this.apparitions();
+    
   },
   methods: {
     apparitions: function() {

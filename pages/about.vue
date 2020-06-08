@@ -6,6 +6,7 @@
         </div>
         <div>
           <div class="bandmember remi" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
+            <div class="imgmb"><img :src="mbone.picture" class="hide-for-big" alt=""/></div>
             <p class="name">{{mbone.name}}</p>
             <div class="line">
               <p class="nickname">{{mbone.nickname}}</p>
@@ -18,6 +19,7 @@
             <p class="role">{{mbone.role}}</p>
           </div>
           <div class="bandmember seb" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
+            <div class="imgmb"><img :src="mbtwo.picture" class="hide-for-big" alt=""/></div>
             <p class="name">{{mbtwo.name}}</p>
             <div class="line">
               <p class="nickname">{{mbtwo.nickname}}</p>
@@ -30,6 +32,7 @@
             <p class="role">{{mbtwo.role}}</p>
           </div>
           <div class="bandmember em" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
+            <div class="imgmb"><img :src="mbthree.picture" class="hide-for-big" alt=""/></div>
             <p class="name">{{mbthree.name}}</p>
             <div class="line">
               <p class="nickname">{{mbthree.nickname}}</p>
@@ -107,7 +110,7 @@ export default {
         })
 
       document.querySelector('.bloc_title h1').classList.add('title_home','fadein','delay_one');
-      document.querySelector('.bloc_home>div:last-of-type').classList.add('img','bandMb','opentobottom','delay');
+      document.querySelector('.bloc_home>div:last-of-type').classList.add('hide-for-tab','img','bandMb','opentobottom','delay');
       this.goodbyeAnim();
       document.querySelector('.bloc_home>div:nth-of-type(2)').classList.add('bandmembers','wrap','fadein','delay_two');
   },

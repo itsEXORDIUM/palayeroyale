@@ -7,6 +7,16 @@
                 @media screen and (max-width: $small-compt) {
                     margin-bottom: 0;
                 }
+
+                @media screen and (max-width: $small-compt) {
+                    margin-bottom: 2.5rem;
+                }
+            }
+
+            .dates {
+                @media screen and (max-width: $small-compt) {
+                    margin-bottom: 3rem;
+                }
             }
         }
 
@@ -17,6 +27,10 @@
             @media screen and (max-width: $small-compt) {
                 max-width:35%;
                 flex: 0 0 35%;
+            }
+
+            @media screen and (max-width: $tablette) {
+                display: none;
             }
         }
     }
@@ -39,6 +53,10 @@
         padding-top:18rem;
         padding-bottom:10rem;
         margin-top:0;
+
+        @media screen and (max-width: $tablette) {
+            padding-top: 5rem;
+        }
     }
 }
 
@@ -64,8 +82,22 @@
             padding-right:1rem;
         }
 
+        @media screen and (max-width: $tablette) {
+            max-width:100%;
+            flex: 0 0 100%;
+        }
+
+        @media screen and (max-width: $phone) {
+            justify-content: center;
+            align-items: center;
+        }
+
         .dates {
             width:100%;
+
+            @media screen and (max-width: $phone) {
+                justify-content: space-between;
+            }
 
             .tour_line {
                 display: flex;
@@ -77,13 +109,30 @@
                 background-repeat: no-repeat;
                 transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
 
+                @media screen and (max-width: $phone) {
+                    flex-direction: column;
+                    width:100%;
+                    padding-right:30%;
+                    position: relative;
+                }
+
                 &:hover {
                     background-size: 220% 100%;
+
+                    @media screen and (max-width: $phone) {
+                        background-size:0;
+                    }
                 }
 
                 .date {
                     flex: 0 0 22%;
                     max-width:22%;
+
+                    @media screen and (max-width: $phone) {
+                        flex: 0 0 100%;
+                        max-width:100%;
+                        width:100%;
+                    }
 
                     .weekday {
                         font-family:'firasans_bold_italic', Arial, Helvetica, sans-serif;
@@ -113,6 +162,12 @@
                     flex: 0 0 30%;
                     max-width:30%;
                     position: relative;
+
+                    @media screen and (max-width: $phone) {
+                        flex: 0 0 100%;
+                        max-width:100%;
+                        width:100%;
+                    }
 
                     .place {
                         font-family:'firasans_bold', Arial, Helvetica, sans-serif;
@@ -173,6 +228,21 @@
                     max-width:30%;
                     display: flex;
                     justify-content: space-between;
+
+                    @media screen and (max-width: $phone) {
+                        position:absolute;
+                        width:50%;
+                        top:0;
+                        right:0;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        height:100%;
+                    }
+
+                    li:not(first-of-type) {
+                        margin-top:1rem;
+                    }
                 }
             }
         }

@@ -1,13 +1,28 @@
 .mini_modules {
     display:flex;
     justify-content:space-between;
+
+    @media screen and (max-width: $phone) {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 // BLOC HOMES
 .wrap.bloc_home, .bloc_home {
     margin-top:12.5rem;
+
+    @media screen and (max-width: $tablette) {
+        margin-top: 8rem;
+    }
 }
 
 .home .bloc_home:last-of-type {
     margin-bottom:14rem;
+
+    @media screen and (max-width: $tablette) {
+        margin-bottom: 8rem;
+    }
 }

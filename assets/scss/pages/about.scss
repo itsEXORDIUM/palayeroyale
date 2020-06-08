@@ -12,6 +12,10 @@
             padding-top: 11rem;
         }
 
+        @media screen and (max-width: $tablette) {
+            height:auto;
+        }
+
         .bloc_title {
             margin-bottom:7.5rem;
 
@@ -22,18 +26,44 @@
             .title_home {
                 width:50%;
                 opacity:0;
+
+                @media screen and (max-width: $tablette) {
+                    width:100%;
+                    text-align: center;
+                }
             }
         }
 
         .bandmembers {
             opacity:0;
-            
+
             > div {
                 width:50%;
                 cursor:pointer;
 
+                .imgmb {
+                    transform:skew(-10deg);
+                    overflow:hidden;
+                    width:48%;
+                    height:18rem;
+                    float:left;
+                    margin-right: 3rem;
+
+                    img {
+                        @media screen and (max-width: $tablette) {
+                            width:110%;
+                            transform:skew(10deg);
+                            margin-top:-7rem;
+                        }
+                    }
+                }
+
                 @media screen and (max-width: $small-compt) {
                     width:60%;
+                }
+
+                @media screen and (max-width: $tablette) {
+                    width:100%;
                 }
 
                 &:hover {
@@ -105,6 +135,11 @@
                 @media screen and (max-width: $small-compt) {
                     letter-spacing: 0.3em;
                 }
+
+                @media screen and (max-width: $tablette) {
+                    font-size: 3em;
+                    letter-spacing: 0;
+                }
             }
 
             .line {
@@ -115,6 +150,10 @@
                 overflow:hidden;
                 transition:height .3s ease-in-out;
                 padding-right: 5rem;
+
+                @media screen and (max-width: $tablette) {
+                    height:4.8rem;
+                }
             }
 
             .socials {
@@ -166,6 +205,10 @@
             border-style:inset;
             @include whiteborder;
 
+            @media screen and (max-width: $tablette) {
+                height:25rem;
+            }
+
             img {
                 width:110%;
                 height:100%;
@@ -184,6 +227,10 @@
         font-size: 1.6em;
         line-height: 1.4em;
 
+        @media screen and (max-width: $tablette) {
+            column-count: 2;
+        }
+
         > p:first-of-type {
             margin-top: 0;
         }
@@ -195,6 +242,10 @@
             @include redboxshadow;
             border-style:inset;
             @include whiteborder;
+
+            @media screen and (max-width: $tablette) {
+                display: none;
+            }
         }
     }
 }
