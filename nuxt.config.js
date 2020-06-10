@@ -48,7 +48,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    routerBase
   ],
   /*
   ** Build configuration
