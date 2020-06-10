@@ -1,5 +1,14 @@
 import axios from 'axios'
 
+const routerBase =
+process.env.DEPLOY_ENV === "GH_PAGES"
+  ? {
+      router: {
+        base: "/palayeroyale/"
+      }
+    }
+  : {};
+
 export default {
   mode: 'universal',
   /*
@@ -17,7 +26,7 @@ export default {
     ]
   },
   router: {
-      base: "/palayeroyale/"
+      base: routerBase
   },
   /*
   ** Customize the progress-bar color
