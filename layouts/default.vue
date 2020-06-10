@@ -7,10 +7,10 @@
     </div>
 </template>
 <script>
-import Header from '~/components/header_footer/header'
-import Footer from '~/components/header_footer/footer'
-import popinNewsletter from '~/components/popins/newsletter'
-import axios from 'axios'
+const Header = require('~/components/header_footer/header');
+const Footer = require('~/components/header_footer/footer');
+const popinNewsletter = require('~/components/popins/newsletter');
+const axios = require('axios');
 
 export default {
   components: {

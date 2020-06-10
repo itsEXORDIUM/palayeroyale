@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import news from '~/components/home_modules/news'
-import axios from 'axios'
+const news = require('~/components/home_modules/news');
+const axios = require('axios');
 
 export default {
     data() {

@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import tourDates from '~/components/home_modules/tourDates'
-import axios from 'axios'
+const tourDates = require('~/components/home_modules/tourDates');
+const axios = require('axios');
 
 export default {
     components: {
