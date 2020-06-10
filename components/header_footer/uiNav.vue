@@ -8,21 +8,22 @@
         <div id="mainMenu">
             <div class="wrap">
                 <ul class="sideMenu">
-                <ul class="socials">
-                    <li class="twitter"><a href="http://twitter.com/palayeroyale" title="Follow the band on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
-                    <li class="instagram"><a href="http://instagram.com/palayeroyale" title="Follow the band on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
-                    <li class="facebook"><a href="http://www.facebook.com/PalayeRoyale" title="Follow the band on Facebook (New Window)" target="_blank"><span class="show-for-sr">Facebook</span></a></li>
-                    <li class="bandsintown"><a href="https://www.bandsintown.com/a/2390644-palaye-royale" title="Follow the band on bandsintown (New Window)" target="_blank"><span class="show-for-sr">bandsintown</span></a></li>
-                    <li class="spotify"><a href="https://open.spotify.com/artist/0hAd6zwEgt9ILuMDY1prcI" title="Follow the band on Spotify (New Window)" target="_blank"><span class="show-for-sr">Spotify</span></a></li>
+                    <ul class="socials">
+                        <li class="twitter"><a href="http://twitter.com/palayeroyale" title="Follow the band on Twitter (New Window)" target="_blank"><span class="show-for-sr">Twitter</span></a></li>
+                        <li class="instagram"><a href="http://instagram.com/palayeroyale" title="Follow the band on Instagram (New Window)" target="_blank"><span class="show-for-sr">Instagram</span></a></li>
+                        <li class="facebook"><a href="http://www.facebook.com/PalayeRoyale" title="Follow the band on Facebook (New Window)" target="_blank"><span class="show-for-sr">Facebook</span></a></li>
+                        <li class="bandsintown"><a href="https://www.bandsintown.com/a/2390644-palaye-royale" title="Follow the band on bandsintown (New Window)" target="_blank"><span class="show-for-sr">bandsintown</span></a></li>
+                        <li class="spotify"><a href="https://open.spotify.com/artist/0hAd6zwEgt9ILuMDY1prcI" title="Follow the band on Spotify (New Window)" target="_blank"><span class="show-for-sr">Spotify</span></a></li>
+                    </ul>
                 </ul>
-                </ul>
+                <div id="secondaryMenuPhone" class="show-for-phone"></div>
                 <ul class="pages" @click="closeMenu()">
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()" class="hide-for-phone"><nuxt-link to="/" title="Go to the Index page">Home</nuxt-link></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/tourDates" title="Go to the Tour Dates page">Tour Dates</nuxt-link></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link  to="/royalTelevision" title="Go to the Vlog page">Bastards Television</nuxt-link></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/news" title="Go to the News page">News</nuxt-link></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><a href="http://smarturl.it/HangOnToYourself" target="_blank" title="Go to the music page (New Window)" class="">Music</a></li>
-                <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/about"  title="Go to the About page">About</nuxt-link></li>
+                    <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/" title="Go to the Index page">Home</nuxt-link></li>
+                    <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/tourDates" title="Go to the Tour Dates page">Tour Dates</nuxt-link></li>
+                    <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link  to="/royalTelevision" title="Go to the Vlog page">Bastards Television</nuxt-link></li>
+                    <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/news" title="Go to the News page">News</nuxt-link></li>
+                    <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><a href="http://smarturl.it/HangOnToYourself" target="_blank" title="Go to the music page (New Window)" class="">Music</a></li>
+                    <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/about"  title="Go to the About page">About</nuxt-link></li>
                 </ul>
             </div>
             <img v-if="this.activepage === 'Home'" src="~/assets/img/menu/home.jpg" alt=""/>
@@ -33,7 +34,7 @@
             <img v-if="this.activepage === 'Music'" src="~/assets/img/menu/music.jpg" alt=""/>
         </div>
 
-        <ul id="secondaryMenu" class="hide-for-phone">
+        <ul id="secondaryMenu">
             <li><a id="ticket_link" href="https://www.bandsintown.com/a/2390644-palaye-royale" class="action" title="Get tickets (New Window)" target="_blank"><span>Tickets</span></a></li>
             <li><a href="https://www.palayeroyale.store/" target="_blank" title="Get merch (New Window)" class="merch"><span>Get Merch</span></a></li>
             <li><button class="newsletter" @click="openPopin()"><span>Subscribe</span> <span class="show-for-sr">to the newsletter</span></button></li>

@@ -36,6 +36,10 @@ body.fira .title_home {
 
 #page:not(.home) .bloc_home .title_home {
     font-size:8rem;
+
+    @media screen and (max-width: $phone) {
+        font-size: 2.6em;
+    }
 }
 
 .bloc_home .subtitle {
@@ -43,12 +47,6 @@ body.fira .title_home {
     color:$grey;
     font-size: 2em;
     line-height: 1.2em;
-
-    @media screen and (max-width: $phone) {
-        margin-top: 1rem;
-        text-align: center;
-        max-width:75%;
-    }
 }
 
 .bloc_home .bloc_title {
@@ -70,6 +68,9 @@ body.fira .title_home {
         margin-right:1.6rem;
 
         @media screen and (max-width: $phone) {
+            margin-top: 1rem;
+            text-align: center;
+            max-width:75%;
             margin-left: 0;
             margin-right: 0;
         }

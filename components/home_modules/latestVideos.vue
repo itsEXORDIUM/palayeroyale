@@ -1,5 +1,5 @@
 <template>
-    <div id="latest_videos" class="hide-for-phone">
+    <div id="latest_videos">
         <h2 class="title_home">Latest Videos</h2>
         <ul>
           <li>

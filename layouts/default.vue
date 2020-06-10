@@ -39,6 +39,11 @@ export default {
 
     if(window.innerWidth < 640) {
       document.querySelector('body').classList.add('fira');
+
+      var secondaryMenu = this.$el.querySelector('#secondaryMenu');
+      var secondaryMenuPhone = this.$el.querySelector('#secondaryMenuPhone');
+      secondaryMenu.remove();
+      secondaryMenuPhone.prepend(secondaryMenu);
     }
   }
 }

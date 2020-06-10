@@ -49,11 +49,19 @@
                     float:left;
                     margin-right: 3rem;
 
+                    @media screen and (max-width: $phone) {
+                        height:15rem;
+                    }
+
                     img {
                         @media screen and (max-width: $tablette) {
                             width:110%;
                             transform:skew(10deg);
                             margin-top:-7rem;
+                        }
+
+                        @media screen and (max-width: $phone) {
+                            margin-top:-1rem;
                         }
                     }
                 }
@@ -121,6 +129,12 @@
                 @media screen and (max-width: $small-compt) {
                     font-size: 6em;
                 }
+
+                @media screen and (max-width: $phone) {
+                    font-size: 3em;
+                    background-size: 220% 100%;
+                    -webkit-text-stroke: 0;
+                }
             }
 
             .nickname {
@@ -140,6 +154,10 @@
                     font-size: 3em;
                     letter-spacing: 0;
                 }
+
+                @media screen and (max-width: $phone) {
+                    font-size: 2.4em;
+                }
             }
 
             .line {
@@ -153,6 +171,13 @@
 
                 @media screen and (max-width: $tablette) {
                     height:4.8rem;
+                }
+
+                @media screen and (max-width: $phone) {
+                    padding: 0;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
                 }
             }
 
@@ -195,6 +220,10 @@
         justify-content: space-between;
         margin-bottom:10rem;
 
+        @media screen and (max-width: $phone) {
+            margin-bottom: 5rem;
+        }
+
         .img_container {
             max-width:49%;
             flex:0 0 49%;
@@ -207,6 +236,10 @@
 
             @media screen and (max-width: $tablette) {
                 height:25rem;
+            }
+
+            @media screen and (max-width: $phone) {
+                height:18rem;
             }
 
             img {
@@ -231,6 +264,10 @@
             column-count: 2;
         }
 
+        @media screen and (max-width: $phone) {
+            column-count: 1;
+        }
+
         > p:first-of-type {
             margin-top: 0;
         }
@@ -245,6 +282,11 @@
 
             @media screen and (max-width: $tablette) {
                 display: none;
+            }
+
+            @media screen and (max-width: $phone) {
+                display: block;
+                margin-bottom: 2rem;
             }
         }
     }

@@ -50,6 +50,10 @@
     @media screen and (max-width: $tablette) {
         font-size:8px;
     }
+
+    @media screen and (max-width: $phone) {
+        font-size:7px;
+    }
 }
 
 body {

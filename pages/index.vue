@@ -106,7 +106,7 @@ export default {
   },
   methods: {
     apparitions: function() {
-      document.getElementById('latest_videos').classList.add('bloc_home','fadein','delay_one');
+      document.getElementById('latest_videos').classList.add('hide-for-phone','bloc_home','fadein','delay_one');
       document.getElementById('cover_img').classList.add('opentobottomtwo','light_delay');
       document.getElementById('latest_song').classList.add('fadein','delay_two');
       document.querySelector('main').classList.add('fadein','delay_big');
