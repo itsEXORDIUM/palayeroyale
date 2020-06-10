@@ -8,10 +8,6 @@ process.env.DEPLOY_ENV === "GH_PAGES"
     }
   : {};
 
-module.exports =  {
-    routerBase
-}
-  
 export default {
   mode: 'universal',
   /*
@@ -52,6 +48,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
   /*
   ** Build configuration
@@ -61,12 +58,12 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, { isDev, isClient }) {
-      if (!isDev) {
-        // relative links, please.
-        config.output.publicPath = './_nuxt/'
-      }
-      return config;
-    }
+    // extend (config, { isDev, isClient }) {
+    //   if (!isDev) {
+    //     // relative links, please.
+    //     config.output.publicPath = './_nuxt/'
+    //   }
+    //   return config;
+    // }
   }
 }
