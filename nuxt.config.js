@@ -1,4 +1,13 @@
 
+const routerBase =
+process.env.DEPLOY_ENV === "GH_PAGES"
+  ? {
+      router: {
+        base: "/my-nuxt-app/"
+      }
+    }
+  : {};
+  
 export default {
   mode: 'universal',
   /*
@@ -40,6 +49,7 @@ export default {
   */
   modules: [
   ],
+  routerBase,
   /*
   ** Build configuration
   */
