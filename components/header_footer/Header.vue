@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import uiNav from '~/components/header_footer/uinav'
+import uiNav from '~/components/header_footer/uiNav'
 import accessPanel from '~/components/header_footer/Access'
 
 export default {
