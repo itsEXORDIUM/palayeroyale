@@ -7,9 +7,9 @@
     </div>
 </template>
 <script>
-import Header from '../components/header_footer/header'
-import Footer from '../components/header_footer/footer'
-import popinNewsletter from '../components/popins/newsletter'
+import Header from './components/header_footer/header'
+import Footer from './components/header_footer/footer'
+import popinNewsletter from './components/popins/newsletter'
 import axios from 'axios'
 
 export default {
