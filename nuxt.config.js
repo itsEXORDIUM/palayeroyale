@@ -1,12 +1,4 @@
-
-const routerBase =
-process.env.DEPLOY_ENV === "GH_PAGES"
-  ? {
-      router: {
-        base: "/palayeroyale/"
-      }
-    }
-  : {};
+import axios from 'axios'
 
 export default {
   mode: 'universal',
@@ -23,6 +15,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+  router: {
+      base: "/palayeroyale/"
   },
   /*
   ** Customize the progress-bar color
@@ -58,12 +53,12 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    // extend (config, { isDev, isClient }) {
-    //   if (!isDev) {
-    //     // relative links, please.
-    //     config.output.publicPath = './_nuxt/'
-    //   }
-    //   return config;
-    // }
+    extend (config, { isDev, isClient }) {
+      if (!isDev) {
+        // relative links, please.
+        config.output.publicPath = './_nuxt/'
+      }
+      return config;
+    }
   }
 }
