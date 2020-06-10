@@ -7,8 +7,8 @@
     </div>
 </template>
 <script>
-import Header from '~/components/header_footer/header'
-import Footer from '~/components/header_footer/footer'
+import Header from '~/components/header_footer/Header'
+import Footer from '~/components/header_footer/Footer'
 import popinNewsletter from '~/components/popins/newsletter'
 import axios from 'axios'
 
