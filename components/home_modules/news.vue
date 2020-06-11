@@ -10,7 +10,7 @@
           <div class="content">
             <h3 class="title" v-html="card.title.rendered"></h3>
             <div class="subtitle" v-html="card.excerpt.rendered"></div>
-            <nuxt-link :to="`/edito/${card.id}`" class="action"><span>Read more</span></nuxt-link>
+            <nuxt-link :to="`/palayeroyale/edito/${card.id}`" class="action"><span>Read more</span></nuxt-link>
           </div>
           <img :src="card._embedded['wp:featuredmedia']['0'].source_url" alt=""/>
         </div>
@@ -20,7 +20,7 @@
           <div class="content">
             <h3 class="title" v-html="card.title.rendered"></h3>
             <div class="subtitle" v-html="card.excerpt.rendered"></div>
-            <nuxt-link :to="`/edito/${card.id}`" class="action"><span>Read more</span></nuxt-link>
+            <nuxt-link :to="`/palayeroyale/edito/${card.id}`" class="action"><span>Read more</span></nuxt-link>
           </div>
           <img :src="card._embedded['wp:featuredmedia']['0'].source_url" alt=""/>
         </div>
