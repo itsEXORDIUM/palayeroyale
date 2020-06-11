@@ -18,7 +18,7 @@
                 </ul>
                 <div id="secondaryMenuPhone" class="show-for-phone"></div>
                 <ul class="pages" @click="closeMenu()">
-                    <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/palayeroyale/" title="Go to the Index page">Home</nuxt-link></li>
+                    <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/palayeroyale" title="Go to the Index page">Home</nuxt-link></li>
                     <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/palayeroyale/tourDates" title="Go to the Tour Dates page">Tour Dates</nuxt-link></li>
                     <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link  to="/palayeroyale/royalTelevision" title="Go to the Vlog page">Bastards Television</nuxt-link></li>
                     <li @mouseover="changeBackground($event)" @mouseout="getActivePage()"><nuxt-link to="/palayeroyale/news" title="Go to the News page">News</nuxt-link></li>
