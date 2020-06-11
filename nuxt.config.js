@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/palayeroyale/'
