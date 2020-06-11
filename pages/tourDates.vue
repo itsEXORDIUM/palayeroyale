@@ -14,6 +14,7 @@ import tourDates from '~/components/home_modules/tourDates'
 import axios from 'axios'
 
 export default {
+    name: 'Dates',
     components: {
       tourDates
     },

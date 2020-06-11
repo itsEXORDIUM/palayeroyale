@@ -9,6 +9,7 @@ import news from '~/components/home_modules/news'
 import axios from 'axios'
 
 export default {
+    name: 'News',
     data() {
         return {
           pageData: [],

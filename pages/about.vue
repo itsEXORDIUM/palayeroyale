@@ -65,6 +65,7 @@
 import axios from 'axios'
 
 export default {
+  name: 'About',
   head () {
     return {
       title: 'About — Palaye Royale',

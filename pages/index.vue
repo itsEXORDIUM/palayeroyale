@@ -26,7 +26,7 @@ import newsletter from '~/components/home_modules/newsletter'
 import axios from 'axios'
 
 export default {
-
+  name: 'Index',
   head () {
     return {
       title: 'Palaye Royale | Official Website',
