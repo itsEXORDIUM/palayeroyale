@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-//   router: {
-//     base: '/palayeroyale/'
-//   }
-// } : {}
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/palayeroyale/'
+  }
+} : {}
 
 export default {
   mode: 'universal',
@@ -22,10 +22,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  // routerBase,
-  router: {
-    base: '/palayeroyale/'
-  },
+  routerBase,
   /*
   ** Customize the progress-bar color
   */

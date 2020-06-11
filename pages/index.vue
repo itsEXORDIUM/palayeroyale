@@ -63,7 +63,7 @@ export default {
   },
   mounted() {
     // Get Home Page Data
-    axios.get('http://51.15.241.193/wp-json/wp/v2/pages/10?_embed')
+    axios.get('51.15.241.193/wp-json/wp/v2/pages/10?_embed')
       .then(response => {
           this.homeData = response.data;
           if(window.innerWidth < 640) {

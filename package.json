@@ -9,7 +9,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate --fail-on-page-error"
+    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.5",
