@@ -90,13 +90,13 @@ export default {
       })
 
     // Get Tour Dates Posts
-    axios.get('https://51.15.241.193/wp-json/wp/v2/Tour_Dates')
+    axios.get('https://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/Tour_Dates')
       .then(response => {
         this.tourDates = response.data;
       })
 
     // Get News Posts
-    axios.get('https://51.15.241.193/wp-json/wp/v2/posts?_embed')
+    axios.get('https://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/posts?_embed')
       .then(response => {
         this.news = response.data;
       })
