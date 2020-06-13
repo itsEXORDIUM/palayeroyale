@@ -23,14 +23,14 @@ export default {
     },
     mounted() {
         // Get Page Data
-        axios.get('http://51.15.241.193/wp-json/wp/v2/pages/8?_embed')
+        axios.get('http://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/pages/8?_embed')
         .then(response => {
             this.pageData = response.data;
             this.pageTitle = response.data.title.rendered;
         })
 
         // Get News Posts
-        axios.get('http://51.15.241.193/wp-json/wp/v2/posts?_embed')
+        axios.get('http://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/posts?_embed')
         .then(response => {
             this.news = response.data;
         })

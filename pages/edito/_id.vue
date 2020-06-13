@@ -24,7 +24,7 @@ export default {
   },
   mounted() {
     // Get News Posts
-    axios.get('http://51.15.241.193/wp-json/wp/v2/posts?_embed')
+    axios.get('http://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/posts?_embed')
       .then(response => {
         this.news = response.data;
         this.news.forEach(element => {
