@@ -3,7 +3,7 @@
     <div id="cover_img">
       <img :src="featuredImage" alt=""/>
       <div class="bloc_titre_logo wrap hide-for-phone">
-        <h1><span class="show-for-sr">Palaye Royale <span>The Bastards</span></span></h1>
+        <h1>TEST<span class="show-for-sr">Palaye Royale <span>The Bastards</span></span></h1>
         
       </div>
     </div>
