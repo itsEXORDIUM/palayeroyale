@@ -23,7 +23,7 @@ export default {
   },
   mounted() {
     // Get Site Data
-    axios.get('http://51.15.241.193/wp-json/')
+    axios.get('https://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/')
       .then(response => {
           this.siteData = response.data;
       })
