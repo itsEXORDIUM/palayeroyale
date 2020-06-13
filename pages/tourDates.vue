@@ -29,13 +29,13 @@ export default {
     },
     mounted() {
         // Get Tour Dates Posts
-        axios.get('http://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/Tour_Dates')
+        axios.get('https://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/Tour_Dates')
         .then(response => {
             this.tourDates = response.data;
         })
 
         // Get Page Data
-        axios.get('http://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/pages/14?_embed')
+        axios.get('https://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/pages/14?_embed')
         .then(response => {
             this.featuredImage = response.data._embedded['wp:featuredmedia']['0'].source_url;
             this.img_one = response.data.acf.picture_1;

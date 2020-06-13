@@ -93,7 +93,7 @@ export default {
     },
   mounted() {
         // Get Page Data
-        axios.get('http://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/pages/6?_embed')
+        axios.get('https://palayewordpress.planethoster.world/Palaye/wp-json/wp/v2/pages/6?_embed')
         .then(response => {
             this.pageData = response.data;
             this.pageTitle = response.data.title.rendered;

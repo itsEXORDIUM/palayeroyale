@@ -63,7 +63,7 @@ export default {
   },
   mounted() {
     // Get Home Page Data
-    axios.get('http://palayewordpress.planethoster.world/Palaye/wp/v2/pages/10?_embed')
+    axios.get('https://palayewordpress.planethoster.world/Palaye/wp/v2/pages/10?_embed')
       .then(response => {
           this.homeData = response.data;
           if(window.innerWidth < 640) {
@@ -90,13 +90,13 @@ export default {
       })
 
     // Get Tour Dates Posts
-    axios.get('http://51.15.241.193/wp-json/wp/v2/Tour_Dates')
+    axios.get('https://51.15.241.193/wp-json/wp/v2/Tour_Dates')
       .then(response => {
         this.tourDates = response.data;
       })
 
     // Get News Posts
-    axios.get('http://51.15.241.193/wp-json/wp/v2/posts?_embed')
+    axios.get('https://51.15.241.193/wp-json/wp/v2/posts?_embed')
       .then(response => {
         this.news = response.data;
       })
