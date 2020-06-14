@@ -6,7 +6,7 @@
         </div>
         <div>
           <div class="bandmember remi" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
-            <div class="imgmb"><img :src="mbone.picture" class="hide-for-big" alt=""/></div>
+            <div class="imgmb hide-for-big"><img :src="mbone.picture" alt=""/></div>
             <p class="name">{{mbone.name}}</p>
             <div class="line">
               <p class="nickname">{{mbone.nickname}}</p>
@@ -19,7 +19,7 @@
             <p class="role">{{mbone.role}}</p>
           </div>
           <div class="bandmember seb" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
-            <div class="imgmb"><img :src="mbtwo.picture" class="hide-for-big" alt=""/></div>
+            <div class="imgmb hide-for-big"><img :src="mbtwo.picture" alt=""/></div>
             <p class="name">{{mbtwo.name}}</p>
             <div class="line">
               <p class="nickname">{{mbtwo.nickname}}</p>
@@ -32,7 +32,7 @@
             <p class="role">{{mbtwo.role}}</p>
           </div>
           <div class="bandmember em" @mouseover="mbImg($event)" @mouseout="mbImgBack()">
-            <div class="imgmb"><img :src="mbthree.picture" class="hide-for-big" alt=""/></div>
+            <div class="imgmb hide-for-big"><img :src="mbthree.picture" alt=""/></div>
             <p class="name">{{mbthree.name}}</p>
             <div class="line">
               <p class="nickname">{{mbthree.nickname}}</p>
