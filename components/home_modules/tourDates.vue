@@ -6,7 +6,7 @@
         <tourDatesPosts :tourDates="tourDates"/>
 
         <div class="big_action">
-          <nuxt-link v-if="home" to="/palayeroyale/tourDates" class="action"><span>More Dates</span></nuxt-link>
+          <nuxt-link v-if="home" to="/tourDates" class="action"><span>More Dates</span></nuxt-link>
           <button class="" v-else><span>More Dates</span></button>
         </div>
         

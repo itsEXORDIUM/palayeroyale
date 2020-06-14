@@ -26,7 +26,7 @@
         </div>
       </div>
       <div v-if="home" class="big_action">
-        <nuxt-link to="/palayeroyale/news" class="action"><span>More News</span></nuxt-link>
+        <nuxt-link to="/news" class="action"><span>More News</span></nuxt-link>
       </div>
     </div>
 </template>

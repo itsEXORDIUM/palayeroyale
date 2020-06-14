@@ -1,9 +1,3 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/palayeroyale/'
-  }
-} : {}
-
 export default {
   mode: 'universal',
   /*
@@ -20,7 +14,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  routerBase,
   /*
   ** Customize the progress-bar color
   */
@@ -58,7 +51,7 @@ export default {
     extend (config, { isDev, isClient }) {
       if (!isDev) {
         // relative links, please.
-        config.output.publicPath = 'https://itsexordium.github.io/palayeroyale/_nuxt/'
+        config.output.publicPath = './_nuxt/'
       }
       return config;
     }

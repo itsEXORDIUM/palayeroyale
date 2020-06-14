@@ -3,7 +3,7 @@
       <div class="content">
         <h1 v-html="title"></h1>
         <div class="content_type" v-html="content"></div>
-        <nuxt-link class="action" to="/palayeroyale/news"><span>Back to the News</span></nuxt-link>
+        <nuxt-link class="action" to="/news"><span>Back to the News</span></nuxt-link>
       </div>
       <img :src="image" alt=""/>
     </div>
